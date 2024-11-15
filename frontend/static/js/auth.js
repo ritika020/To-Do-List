@@ -39,6 +39,13 @@ document.getElementById('loginForm')?.addEventListener('submit', async (e) => {
 document.getElementById('registerForm')?.addEventListener('submit', async (e) => {
     e.preventDefault();
     
+    Logger.info({
+        event: 'REGISTRATION_ATTEMPT',
+        email: document.getElementById('email').value,
+        name: document.getElementById('name').value,
+        gender: document.getElementById('gender').value
+    });
+
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
@@ -74,7 +81,12 @@ document.getElementById('registerForm')?.addEventListener('submit', async (e) =>
         const data = await response.json();
 
         if (response.ok) {
-            // Show success message
+            Logger.info({
+                event: 'REGISTRATION_SUCCESS',
+                userId: data.user_id,
+                email: document.getElementById('email').value,
+                timestamp: new Date().toISOString()
+            });
             showSuccess('Registration successful! Redirecting to login...');
             
             // Redirect to login page after 2 seconds
@@ -82,10 +94,21 @@ document.getElementById('registerForm')?.addEventListener('submit', async (e) =>
                 window.location.href = 'login.html';
             }, 2000);
         } else {
+            Logger.error({
+                event: 'REGISTRATION_FAILED',
+                error: data.error,
+                email: document.getElementById('email').value,
+                timestamp: new Date().toISOString()
+            });
             showError(data.error || 'Registration failed');
         }
     } catch (error) {
-        console.error('Registration error:', error);
+        Logger.error({
+            event: 'REGISTRATION_ERROR',
+            error: error.message,
+            email: document.getElementById('email').value,
+            timestamp: new Date().toISOString()
+        });
         showError('An error occurred during registration');
     } finally {
         const button = e.target.querySelector('button');

@@ -98,14 +98,25 @@ start_service() {
 # Function to stop a service
 stop_service() {
     local service=$1
+    local port=$(get_port "$service")
+    
+    echo -e "${YELLOW}Stopping $service...${NC}"
+    
+    # Try graceful shutdown first
     if [ -f /tmp/${service}.pid ]; then
-        echo -e "${YELLOW}Stopping $service...${NC}"
         kill $(cat /tmp/${service}.pid) 2>/dev/null
         rm /tmp/${service}.pid
-        echo -e "${GREEN}$service stopped${NC}"
-    else
-        echo -e "${RED}$service is not running${NC}"
     fi
+    
+    # Check if the port is still in use after 2 seconds
+    sleep 2
+    if check_service $service; then
+        echo -e "${YELLOW}Service still running. Force killing process on port $port...${NC}"
+        # Find and kill process using the port (works on Linux/Mac)
+        lsof -ti :$port | xargs kill -9 2>/dev/null
+    fi
+    
+    echo -e "${GREEN}$service stopped${NC}"
 }
 
 # Function to check if service is running

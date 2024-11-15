@@ -1,6 +1,34 @@
 check
  * Serving Flask app '__init__'
  * Debug mode: on
-Address already in use
-Port 5000 is in use by another program. Either identify and stop that program, or start the server with a different port.
-On macOS, try disabling the 'AirPlay Receiver' service from System Preferences -> General -> AirDrop & Handoff.
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 333-893-474
+DEBUG:routes:
+    Request:
+    - Method: POST
+    - URL: http://127.0.0.1:5000/auth/register
+    - Headers: {'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/7.42.0', 'Accept': '*/*', 'Postman-Token': 'f83ea9c5-111f-4cf8-b716-72f1da6a9202', 'Host': '127.0.0.1:5000', 'Accept-Encoding': 'gzip, deflate, br', 'Connection': 'keep-alive', 'Content-Length': '110'}
+    - Data: {'email': 'test1@gmail.com', 'password': 'Chintu2000@', 'name': 'Avinash', 'gender': 'Male'}
+    
+DEBUG:routes:Registration request received with data: {'email': 'test1@gmail.com', 'password': 'Chintu2000@', 'name': 'Avinash', 'gender': 'Male'}
+DEBUG:routes:Sending request to auth service at: http://localhost:5001
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5001
+DEBUG:urllib3.connectionpool:http://localhost:5001 "POST /register HTTP/11" 409 42
+DEBUG:routes:Auth service response: 409 - {
+  "error": "Email already registered"
+}
+
+DEBUG:routes:
+    Response:
+    - Status: 409
+    - Headers: {'Content-Type': 'application/json', 'Content-Length': '42'}
+    - Data: {
+  "error": "Email already registered"
+}
+
+    
+INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 06:50:15] "[31m[1mPOST /auth/register HTTP/1.1[0m" 409 -
