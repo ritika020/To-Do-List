@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000';
+const API_URL = 'http://127.0.0.1:5000';
 
 // Check authentication
 function checkAuth() {
@@ -48,15 +48,16 @@ function renderTasks(tasks) {
 
 // Create task element
 function createTaskElement(task) {
-    const taskDiv = document.createElement('div');
-    taskDiv.className = 'task-item';
+    const taskElement = document.createElement('div');
+    taskElement.className = 'task-item';
+    taskElement.dataset.taskId = task.task_id;
     
     const timeRemaining = task.deadline ? calculateTimeRemaining(task.deadline) : null;
     const progressWidth = timeRemaining ? 
         Math.max(0, Math.min(100, (timeRemaining.total / (task.deadline - task.created_at)) * 100)) : 
         100;
 
-    taskDiv.innerHTML = `
+    taskElement.innerHTML = `
         <input type="checkbox" ${task.is_completed ? 'checked' : ''} 
                onchange="toggleTaskComplete('${task.task_id}')">
         <div class="task-content">
@@ -72,7 +73,22 @@ function createTaskElement(task) {
         </div>
     `;
 
-    return taskDiv;
+    // Modify the checkbox event listener
+    const checkbox = taskElement.querySelector('input[type="checkbox"]');
+    checkbox.addEventListener('change', async (e) => {
+        const taskItem = e.target.closest('.task-item');
+        if (e.target.checked) {
+            taskItem.classList.add('completing');
+            // Wait for animation to complete
+            setTimeout(() => {
+                toggleTaskStatus(task.task_id, task.status);
+            }, 300);
+        } else {
+            toggleTaskStatus(task.task_id, task.status);
+        }
+    });
+
+    return taskElement;
 }
 
 // Calculate time remaining
@@ -161,4 +177,185 @@ document.querySelectorAll('.tab-btn').forEach(button => {
 });
 
 // Initial load
-fetchTasks(); 
+fetchTasks();
+
+// Add this function to set minimum datetime
+function updateMinDateTime() {
+    const now = new Date();
+    // Add 5 minutes to current time to give user some buffer
+    now.setMinutes(now.getMinutes() + 5);
+    
+    // Format datetime for input
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    
+    const minDateTime = `${year}-${month}-${day}T${hours}:${minutes}`;
+    
+    // Update all deadline inputs
+    const deadlineInputs = document.querySelectorAll('input[type="datetime-local"]');
+    deadlineInputs.forEach(input => {
+        input.min = minDateTime;
+        // If the current value is empty or in the past, set it to the minimum
+        if (!input.value || new Date(input.value) < now) {
+            input.value = minDateTime;
+        }
+    });
+}
+
+// Call this when page loads and when adding new task form
+document.addEventListener('DOMContentLoaded', () => {
+    updateMinDateTime();
+    // Update every minute
+    setInterval(updateMinDateTime, 60000);
+});
+
+// Modify your task creation validation
+function validateTaskForm(title, description, deadline) {
+    let isValid = true;
+    const now = new Date();
+    const deadlineDate = new Date(deadline);
+
+    if (deadlineDate <= now) {
+        showError('Deadline must be in the future', 'deadline');
+        isValid = false;
+    }
+
+    if (title.trim().length < 1) {
+        showError('Title is required', 'title');
+        isValid = false;
+    }
+
+    if (description.trim().length < 1) {
+        showError('Description is required', 'description');
+        isValid = false;
+    }
+
+    return isValid;
+}
+
+// Add this to your task creation form handler
+document.getElementById('createTaskForm')?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const title = document.getElementById('title').value;
+    const description = document.getElementById('description').value;
+    const deadline = document.getElementById('deadline').value;
+    
+    // Clear previous errors
+    clearErrors();
+    
+    // Validate form including deadline
+    if (!validateTaskForm(title, description, deadline)) {
+        return;
+    }
+    
+    // Rest of your existing task creation code...
+});
+
+// Add this for dynamic task form creation
+function createTaskForm() {
+    updateMinDateTime();
+    // Rest of your existing form creation code...
+}
+
+// Modify the toggleTaskStatus function
+async function toggleTaskStatus(taskId, currentStatus) {
+    try {
+        const response = await fetch(`${API_URL}/tasks/${taskId}/toggle`, {
+            method: 'PUT',
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem('token')}`,
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            const newStatus = currentStatus === 'completed' ? 'pending' : 'completed';
+            
+            // Remove task from current tab
+            const taskElement = document.querySelector(`[data-task-id="${taskId}"]`);
+            if (taskElement) {
+                taskElement.remove();
+            }
+
+            // If task was marked as completed, refresh the completed tasks tab
+            if (newStatus === 'completed') {
+                // Switch to completed tab if not already there
+                const completedTab = document.querySelector('[data-tab="completed"]');
+                if (completedTab) {
+                    switchTab('completed');
+                }
+                await loadTasks('completed');
+            } else {
+                // If task was unmarked as completed, refresh the pending tasks tab
+                await loadTasks('pending');
+                switchTab('pending');
+            }
+        } else {
+            const data = await response.json();
+            showError(data.error || 'Failed to update task status');
+        }
+    } catch (error) {
+        showError('An error occurred while updating task status');
+        console.error('Error:', error);
+    }
+}
+
+// Modify the switchTab function to handle active states
+function switchTab(tabName) {
+    // Update active tab
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.remove('active');
+    });
+    document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
+
+    // Update active content
+    document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.remove('active');
+    });
+    document.querySelector(`#${tabName}Tasks`).classList.add('active');
+
+    // Load tasks for the selected tab
+    loadTasks(tabName);
+}
+
+// Add CSS classes for smooth transitions
+
+// Function to load tasks for a specific tab
+async function loadTasks(status) {
+    try {
+        const response = await fetch(`${API_URL}/tasks?status=${status}`, {
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem('token')}`
+            }
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            const tasksContainer = document.getElementById(`${status}Tasks`);
+            tasksContainer.innerHTML = '';
+
+            if (data.tasks.length === 0) {
+                tasksContainer.innerHTML = `<p class="no-tasks">No ${status} tasks</p>`;
+                return;
+            }
+
+            data.tasks.forEach(task => {
+                const taskElement = createTaskElement(task);
+                tasksContainer.appendChild(taskElement);
+            });
+        }
+    } catch (error) {
+        showError('Failed to load tasks');
+        console.error('Error:', error);
+    }
+}
+
+// Initialize the page
+document.addEventListener('DOMContentLoaded', () => {
+    // Load pending tasks by default
+    switchTab('pending');
+});

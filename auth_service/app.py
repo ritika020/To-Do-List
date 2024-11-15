@@ -4,7 +4,7 @@ import mysql.connector
 import bcrypt
 import jwt
 import uuid
-from datetime import datetime
+from datetime import datetime, timedelta
 import os
 from dotenv import load_dotenv
 
@@ -83,6 +83,58 @@ def register():
                 'message': 'Registration successful',
                 'user_id': user_id
             }), 201
+
+        except mysql.connector.Error as err:
+            print(f"Database Error: {err}")
+            return jsonify({'error': f'Database error occurred: {str(err)}'}), 500
+        finally:
+            cursor.close()
+            conn.close()
+
+    except Exception as e:
+        print(f"Error: {e}")
+        return jsonify({'error': f'An error occurred: {str(e)}'}), 500
+
+@app.route('/login', methods=['POST'])
+def login():
+    try:
+        # Get data from either JSON body or form data
+        data = request.get_json() if request.is_json else request.form
+        
+        email = data.get('email', '').strip('"')
+        password = data.get('password', '').strip('"')
+
+        # Validate required fields
+        if not all([email, password]):
+            return jsonify({'error': 'Email and password are required'}), 400
+
+        # Connect to database
+        conn = mysql.connector.connect(**db_config)
+        cursor = conn.cursor(dictionary=True)
+
+        try:
+            # Get user from database
+            cursor.execute("SELECT * FROM users WHERE email = %s", (email,))
+            user = cursor.fetchone()
+
+            if not user or not bcrypt.checkpw(password.encode('utf-8'), user['password'].encode('utf-8')):
+                return jsonify({'error': 'Invalid email or password'}), 401
+
+            # Generate JWT token
+            token = jwt.encode(
+                {
+                    'user_id': user['user_id'],
+                    'email': user['email'],
+                    'exp': datetime.utcnow() + timedelta(days=1)
+                },
+                os.getenv('JWT_SECRET_KEY', 'your-secret-key'),
+                algorithm='HS256'
+            )
+
+            return jsonify({
+                'token': token,
+                'user_id': user['user_id']
+            }), 200
 
         except mysql.connector.Error as err:
             print(f"Database Error: {err}")

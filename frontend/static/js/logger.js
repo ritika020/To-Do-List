@@ -3,7 +3,7 @@ class Logger {
         const timestamp = new Date().toISOString();
         const logEntry = `[${timestamp}] [${level}] ${JSON.stringify(message)}\n`;
         
-        fetch('http://localhost:5000/api/logs', {
+        fetch('http://127.0.0.1:5000/api/logs', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

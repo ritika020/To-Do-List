@@ -293,4 +293,15 @@ button.loading::after {
     to {
         transform: translateY(-50%) rotate(360deg);
     }
+}
+
+input[type="datetime-local"]:invalid {
+    border-color: #ff4444;
+}
+
+input[type="datetime-local"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
 } 

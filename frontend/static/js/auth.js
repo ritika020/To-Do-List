@@ -24,7 +24,7 @@ document.getElementById('loginForm')?.addEventListener('submit', async (e) => {
         if (response.ok) {
             localStorage.setItem('token', data.token);
             localStorage.setItem('userId', data.user_id);
-            window.location.href = 'index.html';
+            window.location.href = '/';
         } else {
             showError(data.error);
         }
@@ -250,5 +250,5 @@ document.getElementById('confirmPassword')?.addEventListener('input', (e) => {
 document.getElementById('logoutBtn')?.addEventListener('click', () => {
     localStorage.removeItem('token');
     localStorage.removeItem('userId');
-    window.location.href = 'login.html';
+    window.location.href = '/login';
 }); 

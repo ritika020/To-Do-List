@@ -3,3 +3,12 @@
 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5002
 [33mPress CTRL+C to quit[0m
+127.0.0.1 - - [15/Nov/2024 08:00:17] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2024 08:00:57] "[35m[1mPOST /tasks HTTP/1.1[0m" 201 -
+127.0.0.1 - - [15/Nov/2024 08:00:57] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2024 08:01:15] "[35m[1mPOST /tasks HTTP/1.1[0m" 201 -
+127.0.0.1 - - [15/Nov/2024 08:01:15] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2024 08:01:30] "[35m[1mPOST /tasks HTTP/1.1[0m" 201 -
+127.0.0.1 - - [15/Nov/2024 08:01:30] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2024 08:01:41] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2024 08:02:07] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -

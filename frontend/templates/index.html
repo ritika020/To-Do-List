@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
     <link rel="stylesheet" href="../static/css/style.css">
+    <script>
+        if (!localStorage.getItem('token')) {
+            window.location.href = '/login';
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -22,25 +27,25 @@
                     autocomplete="off"
                 >
                 <div id="suggestions" class="suggestions"></div>
-                <input 
-                    type="datetime-local" 
-                    id="deadline"
-                >
+                <div class="form-group">
+                    <label for="deadline">Deadline</label>
+                    <input type="datetime-local" id="deadline" required>
+                </div>
                 <button type="submit">Add Task</button>
             </form>
         </div>
 
         <div class="tabs">
-            <button class="tab-btn active" data-tab="active">Active Tasks</button>
-            <button class="tab-btn" data-tab="completed">Completed Tasks</button>
+            <div class="tab active" data-tab="pending" onclick="switchTab('pending')">Pending Tasks</div>
+            <div class="tab" data-tab="completed" onclick="switchTab('completed')">Completed Tasks</div>
         </div>
 
-        <div id="activeTasks" class="task-list">
-            <!-- Active tasks will be inserted here -->
+        <div class="tab-content active" id="pendingTasks">
+            <!-- Pending tasks will be loaded here -->
         </div>
 
-        <div id="completedTasks" class="task-list hidden">
-            <!-- Completed tasks will be inserted here -->
+        <div class="tab-content" id="completedTasks">
+            <!-- Completed tasks will be loaded here -->
         </div>
     </div>
     <script src="../static/js/tasks.js"></script>
