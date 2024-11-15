@@ -43,8 +43,13 @@ The application consists of multiple microservices:
     DB_USER='your_mysql_user'
     DB_PASSWORD='your_mysql_password'
     ```
+### 2. Doing requirements.txt
 
-### Using the Service Manager
+``` bash
+pip install -r requirements.txt
+```
+
+### 3. Using the Service Manager
 
 1. Make the script executable:
    ``` bash
