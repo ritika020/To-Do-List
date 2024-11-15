@@ -312,11 +312,23 @@ function switchTab(tabName) {
     });
     document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
 
-    // Update active content
-    document.querySelectorAll('.tab-content').forEach(content => {
-        content.classList.remove('active');
+    // Update active content with transition
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(content => {
+        if (content.id === `${tabName}Tasks`) {
+            content.style.display = 'block';
+            // Trigger reflow
+            content.offsetHeight;
+            content.classList.add('active');
+        } else {
+            content.classList.remove('active');
+            setTimeout(() => {
+                if (!content.classList.contains('active')) {
+                    content.style.display = 'none';
+                }
+            }, 300); // Match transition duration
+        }
     });
-    document.querySelector(`#${tabName}Tasks`).classList.add('active');
 
     // Load tasks for the selected tab
     loadTasks(tabName);
@@ -335,6 +347,9 @@ async function loadTasks(status) {
             return;
         }
 
+        const tasksContainer = document.getElementById(`${status}Tasks`);
+        tasksContainer.innerHTML = '<p class="loading">Loading tasks...</p>';
+
         const response = await fetch(`${API_URL}/tasks?status=${status}&user_id=${userId}`, {
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -343,11 +358,15 @@ async function loadTasks(status) {
 
         if (response.ok) {
             const data = await response.json();
-            const tasksContainer = document.getElementById(`${status}Tasks`);
             tasksContainer.innerHTML = '';
 
             if (data.tasks.length === 0) {
-                tasksContainer.innerHTML = `<p class="no-tasks">No ${status} tasks</p>`;
+                tasksContainer.innerHTML = `
+                    <p class="no-tasks">
+                        ${status === 'pending' ? 
+                            'No pending tasks. Add a new task to get started!' : 
+                            'No completed tasks yet. Complete some tasks to see them here!'}
+                    </p>`;
                 return;
             }
 
@@ -357,11 +376,15 @@ async function loadTasks(status) {
             });
         } else {
             const error = await response.json();
-            showError(error.error || 'Failed to load tasks');
+            tasksContainer.innerHTML = `
+                <p class="error-message">
+                    ${error.error || 'Failed to load tasks'}
+                </p>`;
         }
     } catch (error) {
         console.error('Error fetching tasks:', error);
-        showError('Failed to load tasks');
+        tasksContainer.innerHTML = `
+            <p class="error-message">Failed to load tasks</p>`;
     }
 }
 

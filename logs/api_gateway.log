@@ -15,397 +15,9 @@ DEBUG:routes:
     - Data: None
     
 DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
     Response:
     - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, HEAD, GET, OPTIONS'}
-    - Data: 
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'HEAD, GET, POST, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:20:49] "OPTIONS /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:20:49] "OPTIONS /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for status: pending, user: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 405 153
-DEBUG:routes:
-    Response:
-    - Status: 503
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '37'}
-    - Data: {
-  "error": "Service unavailable"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:20:49] "[35m[1mGET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1[0m" 503 -
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 855
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '1036'}
-    - Data: [
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:01:30 GMT",
-    "deadline": "Fri, 15 Nov 2024 20:10:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "a75b3a21-5706-4ddb-a06d-fdff8bbf8362",
-    "task_text": "checking",
-    "time_remaining": 24550.336511,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  },
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:01:15 GMT",
-    "deadline": "Fri, 15 Nov 2024 08:06:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "e03732f5-8a7a-4b77-9782-f5ebd125ae23",
-    "task_text": "",
-    "time_remaining": 0,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  },
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:00:57 GMT",
-    "deadline": "Fri, 15 Nov 2024 08:30:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "437e99eb-c0e4-4113-805c-7a9fc91aae3e",
-    "task_text": "Checking ",
-    "time_remaining": 0,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  }
-]
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:20:49] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for status: pending, user: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 405 153
-DEBUG:routes:
-    Response:
-    - Status: 503
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '37'}
-    - Data: {
-  "error": "Service unavailable"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:20:50] "[35m[1mGET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1[0m" 503 -
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 855
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '1036'}
-    - Data: [
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:01:30 GMT",
-    "deadline": "Fri, 15 Nov 2024 20:10:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "a75b3a21-5706-4ddb-a06d-fdff8bbf8362",
-    "task_text": "checking",
-    "time_remaining": 24549.097604,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  },
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:01:15 GMT",
-    "deadline": "Fri, 15 Nov 2024 08:06:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "e03732f5-8a7a-4b77-9782-f5ebd125ae23",
-    "task_text": "",
-    "time_remaining": 0,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  },
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:00:57 GMT",
-    "deadline": "Fri, 15 Nov 2024 08:30:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "437e99eb-c0e4-4113-805c-7a9fc91aae3e",
-    "task_text": "Checking ",
-    "time_remaining": 0,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  }
-]
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:20:50] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for status: pending, user: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 405 153
-DEBUG:routes:
-    Response:
-    - Status: 503
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '37'}
-    - Data: {
-  "error": "Service unavailable"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:20:51] "[35m[1mGET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1[0m" 503 -
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 855
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '1036'}
-    - Data: [
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:01:30 GMT",
-    "deadline": "Fri, 15 Nov 2024 20:10:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "a75b3a21-5706-4ddb-a06d-fdff8bbf8362",
-    "task_text": "checking",
-    "time_remaining": 24548.076339,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  },
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:01:15 GMT",
-    "deadline": "Fri, 15 Nov 2024 08:06:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "e03732f5-8a7a-4b77-9782-f5ebd125ae23",
-    "task_text": "",
-    "time_remaining": 0,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  },
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:00:57 GMT",
-    "deadline": "Fri, 15 Nov 2024 08:30:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "437e99eb-c0e4-4113-805c-7a9fc91aae3e",
-    "task_text": "Checking ",
-    "time_remaining": 0,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  }
-]
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:20:51] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for status: pending, user: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 405 153
-DEBUG:routes:
-    Response:
-    - Status: 503
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '37'}
-    - Data: {
-  "error": "Service unavailable"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:20:52] "[35m[1mGET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1[0m" 503 -
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 855
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '1036'}
-    - Data: [
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:01:30 GMT",
-    "deadline": "Fri, 15 Nov 2024 20:10:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "a75b3a21-5706-4ddb-a06d-fdff8bbf8362",
-    "task_text": "checking",
-    "time_remaining": 24547.132033,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  },
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:01:15 GMT",
-    "deadline": "Fri, 15 Nov 2024 08:06:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "e03732f5-8a7a-4b77-9782-f5ebd125ae23",
-    "task_text": "",
-    "time_remaining": 0,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  },
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:00:57 GMT",
-    "deadline": "Fri, 15 Nov 2024 08:30:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "437e99eb-c0e4-4113-805c-7a9fc91aae3e",
-    "task_text": "Checking ",
-    "time_remaining": 0,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  }
-]
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:20:52] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:routes:Get tasks request received for status: pending, user: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 405 153
-DEBUG:routes:
-    Response:
-    - Status: 503
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '37'}
-    - Data: {
-  "error": "Service unavailable"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:20:53] "[35m[1mGET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1[0m" 503 -
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 855
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '1036'}
-    - Data: [
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:01:30 GMT",
-    "deadline": "Fri, 15 Nov 2024 20:10:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "a75b3a21-5706-4ddb-a06d-fdff8bbf8362",
-    "task_text": "checking",
-    "time_remaining": 24546.087239,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  },
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:01:15 GMT",
-    "deadline": "Fri, 15 Nov 2024 08:06:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "e03732f5-8a7a-4b77-9782-f5ebd125ae23",
-    "task_text": "",
-    "time_remaining": 0,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  },
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:00:57 GMT",
-    "deadline": "Fri, 15 Nov 2024 08:30:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "437e99eb-c0e4-4113-805c-7a9fc91aae3e",
-    "task_text": "Checking ",
-    "time_remaining": 0,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  }
-]
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:20:53] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, HEAD, GET, OPTIONS'}
+    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, GET, HEAD, OPTIONS'}
     - Data: 
     
 DEBUG:routes:
@@ -415,14 +27,14 @@ DEBUG:routes:
     - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
     - Data: None
     
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:14] "OPTIONS /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:35:12] "OPTIONS /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
 DEBUG:routes:
     Response:
     - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'HEAD, GET, POST, OPTIONS'}
+    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'GET, HEAD, OPTIONS, POST'}
     - Data: 
     
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:14] "OPTIONS /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:35:12] "OPTIONS /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
 DEBUG:routes:
     Request:
     - Method: GET
@@ -441,832 +53,56 @@ DEBUG:routes:
 DEBUG:routes:Get tasks request received for status: pending, user: 0f0e94da-887c-4ba1-8489-53519ef4358f
 DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
 DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 855
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 865
+DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 295
+DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 305
 DEBUG:routes:
     Response:
     - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '1036'}
+    - Headers: {'Content-Type': 'application/json', 'Content-Length': '356'}
     - Data: [
   {
     "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:01:30 GMT",
-    "deadline": "Fri, 15 Nov 2024 20:10:00 GMT",
+    "created_at": "Fri, 15 Nov 2024 08:32:14 GMT",
+    "deadline": "Fri, 15 Nov 2024 08:43:00 GMT",
     "is_completed": 0,
     "reminder": null,
-    "task_id": "a75b3a21-5706-4ddb-a06d-fdff8bbf8362",
-    "task_text": "checking",
-    "time_remaining": 24525.203838,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  },
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:01:15 GMT",
-    "deadline": "Fri, 15 Nov 2024 08:06:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "e03732f5-8a7a-4b77-9782-f5ebd125ae23",
-    "task_text": "",
-    "time_remaining": 0,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  },
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:00:57 GMT",
-    "deadline": "Fri, 15 Nov 2024 08:30:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "437e99eb-c0e4-4113-805c-7a9fc91aae3e",
-    "task_text": "Checking ",
+    "task_id": "2b048788-1684-433a-bb47-cb4c4dba74f6",
+    "task_text": "add reminder test1",
     "time_remaining": 0,
     "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
   }
 ]
 
     
+INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:35:12] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
 DEBUG:routes:
     Response:
     - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '1119'}
+    - Headers: {'Content-Type': 'application/json', 'Content-Length': '395'}
     - Data: {
   "tasks": [
     {
       "completed_at": null,
-      "created_at": "Fri, 15 Nov 2024 08:01:15 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:06:00 GMT",
+      "created_at": "Fri, 15 Nov 2024 08:32:14 GMT",
+      "deadline": "Fri, 15 Nov 2024 08:43:00 GMT",
       "is_completed": 0,
       "reminder": null,
-      "task_id": "e03732f5-8a7a-4b77-9782-f5ebd125ae23",
-      "task_text": "",
+      "task_id": "2b048788-1684-433a-bb47-cb4c4dba74f6",
+      "task_text": "add reminder test1",
       "time_remaining": 0,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    },
-    {
-      "completed_at": null,
-      "created_at": "Fri, 15 Nov 2024 08:00:57 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:30:00 GMT",
-      "is_completed": 0,
-      "reminder": null,
-      "task_id": "437e99eb-c0e4-4113-805c-7a9fc91aae3e",
-      "task_text": "Checking ",
-      "time_remaining": 0,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    },
-    {
-      "completed_at": null,
-      "created_at": "Fri, 15 Nov 2024 08:01:30 GMT",
-      "deadline": "Fri, 15 Nov 2024 20:10:00 GMT",
-      "is_completed": 0,
-      "reminder": null,
-      "task_id": "a75b3a21-5706-4ddb-a06d-fdff8bbf8362",
-      "task_text": "checking",
-      "time_remaining": 24525.203344,
       "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
     }
   ]
 }
 
     
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:14] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:14] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/complete/e03732f5-8a7a-4b77-9782-f5ebd125ae23
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'PUT', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:17] "OPTIONS /tasks/complete/e03732f5-8a7a-4b77-9782-f5ebd125ae23 HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: PUT
-    - URL: http://127.0.0.1:5000/tasks/complete/e03732f5-8a7a-4b77-9782-f5ebd125ae23
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Content-Length': '0', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "PUT /tasks/complete/e03732f5-8a7a-4b77-9782-f5ebd125ae23 HTTP/11" 200 38
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '43'}
-    - Data: {
-  "message": "Task marked as complete"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:17] "PUT /tasks/complete/e03732f5-8a7a-4b77-9782-f5ebd125ae23 HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 580
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '701'}
-    - Data: [
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:01:30 GMT",
-    "deadline": "Fri, 15 Nov 2024 20:10:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "a75b3a21-5706-4ddb-a06d-fdff8bbf8362",
-    "task_text": "checking",
-    "time_remaining": 24522.139252,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  },
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:00:57 GMT",
-    "deadline": "Fri, 15 Nov 2024 08:30:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "437e99eb-c0e4-4113-805c-7a9fc91aae3e",
-    "task_text": "Checking ",
-    "time_remaining": 0,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  }
-]
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:17] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/e03732f5-8a7a-4b77-9782-f5ebd125ae23/toggle
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'PUT', 'Access-Control-Request-Headers': 'authorization,content-type', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-ERROR:routes:404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-DEBUG:routes:
-    Response:
-    - Status: 404
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '27', 'Access-Control-Allow-Origin': 'http://localhost:8080', 'Access-Control-Allow-Headers': 'authorization, content-type', 'Access-Control-Allow-Methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'Vary': 'Origin'}
-    - Data: {
-  "error": "Not found"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:18] "[33mOPTIONS /tasks/e03732f5-8a7a-4b77-9782-f5ebd125ae23/toggle HTTP/1.1[0m" 404 -
-DEBUG:routes:
-    Request:
-    - Method: PUT
-    - URL: http://127.0.0.1:5000/tasks/complete/e03732f5-8a7a-4b77-9782-f5ebd125ae23
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Content-Length': '0', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/e03732f5-8a7a-4b77-9782-f5ebd125ae23/toggle
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'PUT', 'Access-Control-Request-Headers': 'authorization,content-type', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-ERROR:routes:404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-DEBUG:routes:
-    Response:
-    - Status: 404
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '27', 'Access-Control-Allow-Origin': 'http://localhost:8080', 'Access-Control-Allow-Headers': 'authorization, content-type', 'Access-Control-Allow-Methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'Vary': 'Origin'}
-    - Data: {
-  "error": "Not found"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:19] "[33mOPTIONS /tasks/e03732f5-8a7a-4b77-9782-f5ebd125ae23/toggle HTTP/1.1[0m" 404 -
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "PUT /tasks/complete/e03732f5-8a7a-4b77-9782-f5ebd125ae23 HTTP/11" 200 38
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '43'}
-    - Data: {
-  "message": "Task marked as complete"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:19] "PUT /tasks/complete/e03732f5-8a7a-4b77-9782-f5ebd125ae23 HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 580
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '701'}
-    - Data: [
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:01:30 GMT",
-    "deadline": "Fri, 15 Nov 2024 20:10:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "a75b3a21-5706-4ddb-a06d-fdff8bbf8362",
-    "task_text": "checking",
-    "time_remaining": 24520.960844,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  },
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:00:57 GMT",
-    "deadline": "Fri, 15 Nov 2024 08:30:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "437e99eb-c0e4-4113-805c-7a9fc91aae3e",
-    "task_text": "Checking ",
-    "time_remaining": 0,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  }
-]
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:19] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: PUT
-    - URL: http://127.0.0.1:5000/tasks/complete/e03732f5-8a7a-4b77-9782-f5ebd125ae23
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Content-Length': '0', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "PUT /tasks/complete/e03732f5-8a7a-4b77-9782-f5ebd125ae23 HTTP/11" 200 38
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '43'}
-    - Data: {
-  "message": "Task marked as complete"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:20] "PUT /tasks/complete/e03732f5-8a7a-4b77-9782-f5ebd125ae23 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:35:12] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
 DEBUG:routes:
     Request:
     - Method: OPTIONS
     - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
     - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
     - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, HEAD, GET, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:20] "OPTIONS /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 580
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '701'}
-    - Data: [
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:01:30 GMT",
-    "deadline": "Fri, 15 Nov 2024 20:10:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "a75b3a21-5706-4ddb-a06d-fdff8bbf8362",
-    "task_text": "checking",
-    "time_remaining": 24519.510299,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  },
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:00:57 GMT",
-    "deadline": "Fri, 15 Nov 2024 08:30:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "437e99eb-c0e4-4113-805c-7a9fc91aae3e",
-    "task_text": "Checking ",
-    "time_remaining": 0,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  }
-]
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:20] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/e03732f5-8a7a-4b77-9782-f5ebd125ae23/toggle
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'PUT', 'Access-Control-Request-Headers': 'authorization,content-type', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-ERROR:routes:404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-DEBUG:routes:
-    Response:
-    - Status: 404
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '27', 'Access-Control-Allow-Origin': 'http://localhost:8080', 'Access-Control-Allow-Headers': 'authorization, content-type', 'Access-Control-Allow-Methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'Vary': 'Origin'}
-    - Data: {
-  "error": "Not found"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:20] "[33mOPTIONS /tasks/e03732f5-8a7a-4b77-9782-f5ebd125ae23/toggle HTTP/1.1[0m" 404 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/complete/437e99eb-c0e4-4113-805c-7a9fc91aae3e
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'PUT', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:26] "OPTIONS /tasks/complete/437e99eb-c0e4-4113-805c-7a9fc91aae3e HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: PUT
-    - URL: http://127.0.0.1:5000/tasks/complete/437e99eb-c0e4-4113-805c-7a9fc91aae3e
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Content-Length': '0', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "PUT /tasks/complete/437e99eb-c0e4-4113-805c-7a9fc91aae3e HTTP/11" 200 38
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '43'}
-    - Data: {
-  "message": "Task marked as complete"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:26] "PUT /tasks/complete/437e99eb-c0e4-4113-805c-7a9fc91aae3e HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, HEAD, GET, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:26] "OPTIONS /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 296
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '357'}
-    - Data: [
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:01:30 GMT",
-    "deadline": "Fri, 15 Nov 2024 20:10:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "a75b3a21-5706-4ddb-a06d-fdff8bbf8362",
-    "task_text": "checking",
-    "time_remaining": 24513.344949,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  }
-]
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:26] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/437e99eb-c0e4-4113-805c-7a9fc91aae3e/toggle
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'PUT', 'Access-Control-Request-Headers': 'authorization,content-type', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-ERROR:routes:404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-DEBUG:routes:
-    Response:
-    - Status: 404
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '27', 'Access-Control-Allow-Origin': 'http://localhost:8080', 'Access-Control-Allow-Headers': 'authorization, content-type', 'Access-Control-Allow-Methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'Vary': 'Origin'}
-    - Data: {
-  "error": "Not found"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:26] "[33mOPTIONS /tasks/437e99eb-c0e4-4113-805c-7a9fc91aae3e/toggle HTTP/1.1[0m" 404 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/e03732f5-8a7a-4b77-9782-f5ebd125ae23/toggle
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'PUT', 'Access-Control-Request-Headers': 'authorization,content-type', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/complete/e03732f5-8a7a-4b77-9782-f5ebd125ae23
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'PUT', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-ERROR:routes:404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, OPTIONS'}
-    - Data: 
-    
-DEBUG:routes:
-    Response:
-    - Status: 404
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '27', 'Access-Control-Allow-Origin': 'http://localhost:8080', 'Access-Control-Allow-Headers': 'authorization, content-type', 'Access-Control-Allow-Methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'Vary': 'Origin'}
-    - Data: {
-  "error": "Not found"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:28] "OPTIONS /tasks/complete/e03732f5-8a7a-4b77-9782-f5ebd125ae23 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:28] "[33mOPTIONS /tasks/e03732f5-8a7a-4b77-9782-f5ebd125ae23/toggle HTTP/1.1[0m" 404 -
-DEBUG:routes:
-    Request:
-    - Method: PUT
-    - URL: http://127.0.0.1:5000/tasks/complete/e03732f5-8a7a-4b77-9782-f5ebd125ae23
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Content-Length': '0', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "PUT /tasks/complete/e03732f5-8a7a-4b77-9782-f5ebd125ae23 HTTP/11" 200 38
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '43'}
-    - Data: {
-  "message": "Task marked as complete"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:28] "PUT /tasks/complete/e03732f5-8a7a-4b77-9782-f5ebd125ae23 HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 296
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '357'}
-    - Data: [
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:01:30 GMT",
-    "deadline": "Fri, 15 Nov 2024 20:10:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "a75b3a21-5706-4ddb-a06d-fdff8bbf8362",
-    "task_text": "checking",
-    "time_remaining": 24511.189776,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  }
-]
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:28] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/437e99eb-c0e4-4113-805c-7a9fc91aae3e/toggle
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'PUT', 'Access-Control-Request-Headers': 'authorization,content-type', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Request:
-    - Method: PUT
-    - URL: http://127.0.0.1:5000/tasks/complete/437e99eb-c0e4-4113-805c-7a9fc91aae3e
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Content-Length': '0', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-ERROR:routes:404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-DEBUG:routes:
-    Response:
-    - Status: 404
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '27', 'Access-Control-Allow-Origin': 'http://localhost:8080', 'Access-Control-Allow-Headers': 'authorization, content-type', 'Access-Control-Allow-Methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'Vary': 'Origin'}
-    - Data: {
-  "error": "Not found"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:29] "[33mOPTIONS /tasks/437e99eb-c0e4-4113-805c-7a9fc91aae3e/toggle HTTP/1.1[0m" 404 -
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "PUT /tasks/complete/437e99eb-c0e4-4113-805c-7a9fc91aae3e HTTP/11" 200 38
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '43'}
-    - Data: {
-  "message": "Task marked as complete"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:29] "PUT /tasks/complete/437e99eb-c0e4-4113-805c-7a9fc91aae3e HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 296
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '357'}
-    - Data: [
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:01:30 GMT",
-    "deadline": "Fri, 15 Nov 2024 20:10:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "a75b3a21-5706-4ddb-a06d-fdff8bbf8362",
-    "task_text": "checking",
-    "time_remaining": 24510.322995,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  }
-]
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:29] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/complete/a75b3a21-5706-4ddb-a06d-fdff8bbf8362
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'PUT', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:35] "OPTIONS /tasks/complete/a75b3a21-5706-4ddb-a06d-fdff8bbf8362 HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: PUT
-    - URL: http://127.0.0.1:5000/tasks/complete/a75b3a21-5706-4ddb-a06d-fdff8bbf8362
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Content-Length': '0', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "PUT /tasks/complete/a75b3a21-5706-4ddb-a06d-fdff8bbf8362 HTTP/11" 200 38
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '43'}
-    - Data: {
-  "message": "Task marked as complete"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:35] "PUT /tasks/complete/a75b3a21-5706-4ddb-a06d-fdff8bbf8362 HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, HEAD, GET, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:35] "OPTIONS /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 3
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '3'}
-    - Data: []
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:35] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/a75b3a21-5706-4ddb-a06d-fdff8bbf8362/toggle
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'PUT', 'Access-Control-Request-Headers': 'authorization,content-type', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-ERROR:routes:404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-DEBUG:routes:
-    Response:
-    - Status: 404
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '27', 'Access-Control-Allow-Origin': 'http://localhost:8080', 'Access-Control-Allow-Headers': 'authorization, content-type', 'Access-Control-Allow-Methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'Vary': 'Origin'}
-    - Data: {
-  "error": "Not found"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:36] "[33mOPTIONS /tasks/a75b3a21-5706-4ddb-a06d-fdff8bbf8362/toggle HTTP/1.1[0m" 404 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/complete/a75b3a21-5706-4ddb-a06d-fdff8bbf8362
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'PUT', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/a75b3a21-5706-4ddb-a06d-fdff8bbf8362/toggle
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'PUT', 'Access-Control-Request-Headers': 'authorization,content-type', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, OPTIONS'}
-    - Data: 
-    
-ERROR:routes:404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:42] "OPTIONS /tasks/complete/a75b3a21-5706-4ddb-a06d-fdff8bbf8362 HTTP/1.1" 200 -
-DEBUG:routes:
-    Response:
-    - Status: 404
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '27', 'Access-Control-Allow-Origin': 'http://localhost:8080', 'Access-Control-Allow-Headers': 'authorization, content-type', 'Access-Control-Allow-Methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'Vary': 'Origin'}
-    - Data: {
-  "error": "Not found"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:42] "[33mOPTIONS /tasks/a75b3a21-5706-4ddb-a06d-fdff8bbf8362/toggle HTTP/1.1[0m" 404 -
-DEBUG:routes:
-    Request:
-    - Method: PUT
-    - URL: http://127.0.0.1:5000/tasks/complete/a75b3a21-5706-4ddb-a06d-fdff8bbf8362
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Content-Length': '0', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "PUT /tasks/complete/a75b3a21-5706-4ddb-a06d-fdff8bbf8362 HTTP/11" 200 38
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '43'}
-    - Data: {
-  "message": "Task marked as complete"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:42] "PUT /tasks/complete/a75b3a21-5706-4ddb-a06d-fdff8bbf8362 HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, HEAD, GET, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:42] "OPTIONS /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 3
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '3'}
-    - Data: []
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:42] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: PUT
-    - URL: http://127.0.0.1:5000/tasks/complete/a75b3a21-5706-4ddb-a06d-fdff8bbf8362
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Content-Length': '0', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "PUT /tasks/complete/a75b3a21-5706-4ddb-a06d-fdff8bbf8362 HTTP/11" 200 38
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '43'}
-    - Data: {
-  "message": "Task marked as complete"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:43] "PUT /tasks/complete/a75b3a21-5706-4ddb-a06d-fdff8bbf8362 HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 3
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '3'}
-    - Data: []
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:43] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/a75b3a21-5706-4ddb-a06d-fdff8bbf8362/toggle
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'PUT', 'Access-Control-Request-Headers': 'authorization,content-type', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-ERROR:routes:404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-DEBUG:routes:
-    Response:
-    - Status: 404
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '27', 'Access-Control-Allow-Origin': 'http://localhost:8080', 'Access-Control-Allow-Headers': 'authorization, content-type', 'Access-Control-Allow-Methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'Vary': 'Origin'}
-    - Data: {
-  "error": "Not found"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:43] "[33mOPTIONS /tasks/a75b3a21-5706-4ddb-a06d-fdff8bbf8362/toggle HTTP/1.1[0m" 404 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, HEAD, GET, OPTIONS'}
-    - Data: 
     
 DEBUG:routes:
     Request:
@@ -1275,22 +111,20 @@ DEBUG:routes:
     - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
     - Data: None
     
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:47] "OPTIONS /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
 DEBUG:routes:
     Response:
     - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'HEAD, GET, POST, OPTIONS'}
+    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, GET, HEAD, OPTIONS'}
     - Data: 
     
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:47] "OPTIONS /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
 DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
+    Response:
+    - Status: 200
+    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'GET, HEAD, OPTIONS, POST'}
+    - Data: 
     
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
+INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:38:57] "OPTIONS /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:38:57] "OPTIONS /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
 DEBUG:routes:
     Request:
     - Method: GET
@@ -1299,150 +133,6 @@ DEBUG:routes:
     - Data: None
     
 DEBUG:routes:Get tasks request received for status: pending, user: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 13
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 3
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '18'}
-    - Data: {
-  "tasks": []
-}
-
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '3'}
-    - Data: []
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:47] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:47] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/suggestions?q=no
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'HEAD, GET, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:52] "OPTIONS /suggestions?q=no HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/suggestions?q=no
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5003
-DEBUG:urllib3.connectionpool:http://localhost:5003 "GET /suggestions?q=no HTTP/11" 200 3
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '3'}
-    - Data: []
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:52] "GET /suggestions?q=no HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/suggestions?q=now
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'HEAD, GET, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:53] "OPTIONS /suggestions?q=now HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/suggestions?q=now
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5003
-DEBUG:urllib3.connectionpool:http://localhost:5003 "GET /suggestions?q=now HTTP/11" 200 3
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '3'}
-    - Data: []
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:53] "GET /suggestions?q=now HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'POST', 'Access-Control-Request-Headers': 'authorization,content-type', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'HEAD, GET, POST, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:54] "OPTIONS /tasks HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: POST
-    - URL: http://127.0.0.1:5000/tasks
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Content-Length': '98', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Content-Type': 'application/json', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: {'user_id': '0f0e94da-887c-4ba1-8489-53519ef4358f', 'task_text': 'now', 'deadline': '2024-11-15T08:26'}
-    
-DEBUG:routes:Create task request received with data: {'user_id': '0f0e94da-887c-4ba1-8489-53519ef4358f', 'task_text': 'now', 'deadline': '2024-11-15T08:26'}
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "POST /tasks HTTP/11" 201 278
-DEBUG:routes:Task created successfully, adding to suggestions
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5003
-DEBUG:urllib3.connectionpool:http://localhost:5003 "POST /suggestions/add HTTP/11" 200 52
-DEBUG:routes:Suggestion service response: 200
-DEBUG:routes:
-    Response:
-    - Status: 201
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '315'}
-    - Data: {
-  "completed_at": null,
-  "created_at": "Fri, 15 Nov 2024 08:21:54 GMT",
-  "deadline": "Fri, 15 Nov 2024 08:26:00 GMT",
-  "is_completed": 0,
-  "reminder": null,
-  "task_id": "9be5c055-977f-4952-b1fa-ea9b80c8870d",
-  "task_text": "now",
-  "time_remaining": 0,
-  "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:54] "[35m[1mPOST /tasks HTTP/1.1[0m" 201 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, HEAD, GET, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:54] "OPTIONS /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
 DEBUG:routes:
     Request:
     - Method: GET
@@ -1452,108 +142,23 @@ DEBUG:routes:
     
 DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
 DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 280
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '341'}
-    - Data: [
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:21:54 GMT",
-    "deadline": "Fri, 15 Nov 2024 08:26:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "9be5c055-977f-4952-b1fa-ea9b80c8870d",
-    "task_text": "now",
-    "time_remaining": 0,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  }
-]
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:21:54] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, HEAD, GET, OPTIONS'}
-    - Data: 
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'HEAD, GET, POST, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:22:01] "OPTIONS /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:22:01] "OPTIONS /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:routes:Get tasks request received for status: pending, user: 0f0e94da-887c-4ba1-8489-53519ef4358f
 DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 280
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 290
+DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 305
+DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 295
 DEBUG:routes:
     Response:
     - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '341'}
-    - Data: [
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:21:54 GMT",
-    "deadline": "Fri, 15 Nov 2024 08:26:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "9be5c055-977f-4952-b1fa-ea9b80c8870d",
-    "task_text": "now",
-    "time_remaining": 0,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  }
-]
-
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '380'}
+    - Headers: {'Content-Type': 'application/json', 'Content-Length': '395'}
     - Data: {
   "tasks": [
     {
       "completed_at": null,
-      "created_at": "Fri, 15 Nov 2024 08:21:54 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:26:00 GMT",
+      "created_at": "Fri, 15 Nov 2024 08:32:14 GMT",
+      "deadline": "Fri, 15 Nov 2024 08:43:00 GMT",
       "is_completed": 0,
       "reminder": null,
-      "task_id": "9be5c055-977f-4952-b1fa-ea9b80c8870d",
-      "task_text": "now",
+      "task_id": "2b048788-1684-433a-bb47-cb4c4dba74f6",
+      "task_text": "add reminder test1",
       "time_remaining": 0,
       "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
     }
@@ -1561,8 +166,27 @@ DEBUG:routes:
 }
 
     
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:22:01] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:22:01] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+DEBUG:routes:
+    Response:
+    - Status: 200
+    - Headers: {'Content-Type': 'application/json', 'Content-Length': '356'}
+    - Data: [
+  {
+    "completed_at": null,
+    "created_at": "Fri, 15 Nov 2024 08:32:14 GMT",
+    "deadline": "Fri, 15 Nov 2024 08:43:00 GMT",
+    "is_completed": 0,
+    "reminder": null,
+    "task_id": "2b048788-1684-433a-bb47-cb4c4dba74f6",
+    "task_text": "add reminder test1",
+    "time_remaining": 0,
+    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
+  }
+]
+
+    
+INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:38:57] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:38:57] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
 DEBUG:routes:
     Request:
     - Method: OPTIONS
@@ -1570,6 +194,13 @@ DEBUG:routes:
     - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
     - Data: None
     
+DEBUG:routes:
+    Response:
+    - Status: 200
+    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, GET, HEAD, OPTIONS'}
+    - Data: 
+    
+INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:39:49] "OPTIONS /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
 DEBUG:routes:
     Request:
     - Method: OPTIONS
@@ -1580,50 +211,43 @@ DEBUG:routes:
 DEBUG:routes:
     Response:
     - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, HEAD, GET, OPTIONS'}
+    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'GET, HEAD, OPTIONS, POST'}
     - Data: 
     
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'HEAD, GET, POST, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:22:09] "OPTIONS /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:22:09] "OPTIONS /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:39:49] "OPTIONS /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
 DEBUG:routes:
     Request:
     - Method: GET
     - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
     - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
     - Data: None
     
 DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
+DEBUG:routes:
+    Request:
+    - Method: GET
+    - URL: http://127.0.0.1:5000/tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
+    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
+    - Data: None
+    
 DEBUG:routes:Get tasks request received for status: pending, user: 0f0e94da-887c-4ba1-8489-53519ef4358f
 DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
 DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 280
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 290
+DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 295
+DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 305
 DEBUG:routes:
     Response:
     - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '341'}
+    - Headers: {'Content-Type': 'application/json', 'Content-Length': '356'}
     - Data: [
   {
     "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:21:54 GMT",
-    "deadline": "Fri, 15 Nov 2024 08:26:00 GMT",
+    "created_at": "Fri, 15 Nov 2024 08:32:14 GMT",
+    "deadline": "Fri, 15 Nov 2024 08:43:00 GMT",
     "is_completed": 0,
     "reminder": null,
-    "task_id": "9be5c055-977f-4952-b1fa-ea9b80c8870d",
-    "task_text": "now",
+    "task_id": "2b048788-1684-433a-bb47-cb4c4dba74f6",
+    "task_text": "add reminder test1",
     "time_remaining": 0,
     "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
   }
@@ -1633,17 +257,17 @@ DEBUG:routes:
 DEBUG:routes:
     Response:
     - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '380'}
+    - Headers: {'Content-Type': 'application/json', 'Content-Length': '395'}
     - Data: {
   "tasks": [
     {
       "completed_at": null,
-      "created_at": "Fri, 15 Nov 2024 08:21:54 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:26:00 GMT",
+      "created_at": "Fri, 15 Nov 2024 08:32:14 GMT",
+      "deadline": "Fri, 15 Nov 2024 08:43:00 GMT",
       "is_completed": 0,
       "reminder": null,
-      "task_id": "9be5c055-977f-4952-b1fa-ea9b80c8870d",
-      "task_text": "now",
+      "task_id": "2b048788-1684-433a-bb47-cb4c4dba74f6",
+      "task_text": "add reminder test1",
       "time_remaining": 0,
       "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
     }
@@ -1651,15 +275,36 @@ DEBUG:routes:
 }
 
     
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:22:09] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:22:09] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:39:49] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:39:49] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
 DEBUG:routes:
     Request:
-    - Method: GET
+    - Method: OPTIONS
     - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
+    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
     - Data: None
     
+DEBUG:routes:
+    Response:
+    - Status: 200
+    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, GET, HEAD, OPTIONS'}
+    - Data: 
+    
+DEBUG:routes:
+    Request:
+    - Method: OPTIONS
+    - URL: http://127.0.0.1:5000/tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
+    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
+    - Data: None
+    
+INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:39:58] "OPTIONS /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+DEBUG:routes:
+    Response:
+    - Status: 200
+    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'GET, HEAD, OPTIONS, POST'}
+    - Data: 
+    
+INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:39:58] "OPTIONS /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
 DEBUG:routes:
     Request:
     - Method: GET
@@ -1667,45 +312,53 @@ DEBUG:routes:
     - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
     - Data: None
     
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
+DEBUG:routes:
+    Request:
+    - Method: GET
+    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
+    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
+    - Data: None
+    
 DEBUG:routes:Get tasks request received for status: pending, user: 0f0e94da-887c-4ba1-8489-53519ef4358f
+DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
 DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
 DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 280
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 290
+DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 295
+DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 305
 DEBUG:routes:
     Response:
     - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '341'}
+    - Headers: {'Content-Type': 'application/json', 'Content-Length': '356'}
     - Data: [
   {
     "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:21:54 GMT",
-    "deadline": "Fri, 15 Nov 2024 08:26:00 GMT",
+    "created_at": "Fri, 15 Nov 2024 08:32:14 GMT",
+    "deadline": "Fri, 15 Nov 2024 08:43:00 GMT",
     "is_completed": 0,
     "reminder": null,
-    "task_id": "9be5c055-977f-4952-b1fa-ea9b80c8870d",
-    "task_text": "now",
+    "task_id": "2b048788-1684-433a-bb47-cb4c4dba74f6",
+    "task_text": "add reminder test1",
     "time_remaining": 0,
     "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
   }
 ]
 
     
+INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:39:58] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
 DEBUG:routes:
     Response:
     - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '380'}
+    - Headers: {'Content-Type': 'application/json', 'Content-Length': '395'}
     - Data: {
   "tasks": [
     {
       "completed_at": null,
-      "created_at": "Fri, 15 Nov 2024 08:21:54 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:26:00 GMT",
+      "created_at": "Fri, 15 Nov 2024 08:32:14 GMT",
+      "deadline": "Fri, 15 Nov 2024 08:43:00 GMT",
       "is_completed": 0,
       "reminder": null,
-      "task_id": "9be5c055-977f-4952-b1fa-ea9b80c8870d",
-      "task_text": "now",
+      "task_id": "2b048788-1684-433a-bb47-cb4c4dba74f6",
+      "task_text": "add reminder test1",
       "time_remaining": 0,
       "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
     }
@@ -1713,1034 +366,4 @@ DEBUG:routes:
 }
 
     
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:22:10] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:22:10] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:routes:Get tasks request received for status: pending, user: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 290
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 280
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '380'}
-    - Data: {
-  "tasks": [
-    {
-      "completed_at": null,
-      "created_at": "Fri, 15 Nov 2024 08:21:54 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:26:00 GMT",
-      "is_completed": 0,
-      "reminder": null,
-      "task_id": "9be5c055-977f-4952-b1fa-ea9b80c8870d",
-      "task_text": "now",
-      "time_remaining": 0,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    }
-  ]
-}
-
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '341'}
-    - Data: [
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:21:54 GMT",
-    "deadline": "Fri, 15 Nov 2024 08:26:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "9be5c055-977f-4952-b1fa-ea9b80c8870d",
-    "task_text": "now",
-    "time_remaining": 0,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  }
-]
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:22:11] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:22:11] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for status: pending, user: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 290
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 280
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '380'}
-    - Data: {
-  "tasks": [
-    {
-      "completed_at": null,
-      "created_at": "Fri, 15 Nov 2024 08:21:54 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:26:00 GMT",
-      "is_completed": 0,
-      "reminder": null,
-      "task_id": "9be5c055-977f-4952-b1fa-ea9b80c8870d",
-      "task_text": "now",
-      "time_remaining": 0,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    }
-  ]
-}
-
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '341'}
-    - Data: [
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:21:54 GMT",
-    "deadline": "Fri, 15 Nov 2024 08:26:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "9be5c055-977f-4952-b1fa-ea9b80c8870d",
-    "task_text": "now",
-    "time_remaining": 0,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  }
-]
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:22:12] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:22:12] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for status: pending, user: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 280
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 290
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '341'}
-    - Data: [
-  {
-    "completed_at": null,
-    "created_at": "Fri, 15 Nov 2024 08:21:54 GMT",
-    "deadline": "Fri, 15 Nov 2024 08:26:00 GMT",
-    "is_completed": 0,
-    "reminder": null,
-    "task_id": "9be5c055-977f-4952-b1fa-ea9b80c8870d",
-    "task_text": "now",
-    "time_remaining": 0,
-    "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-  }
-]
-
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '380'}
-    - Data: {
-  "tasks": [
-    {
-      "completed_at": null,
-      "created_at": "Fri, 15 Nov 2024 08:21:54 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:26:00 GMT",
-      "is_completed": 0,
-      "reminder": null,
-      "task_id": "9be5c055-977f-4952-b1fa-ea9b80c8870d",
-      "task_text": "now",
-      "time_remaining": 0,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    }
-  ]
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:22:12] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:22:12] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/complete/9be5c055-977f-4952-b1fa-ea9b80c8870d
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'PUT', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:22:25] "OPTIONS /tasks/complete/9be5c055-977f-4952-b1fa-ea9b80c8870d HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: PUT
-    - URL: http://127.0.0.1:5000/tasks/complete/9be5c055-977f-4952-b1fa-ea9b80c8870d
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Content-Length': '0', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "PUT /tasks/complete/9be5c055-977f-4952-b1fa-ea9b80c8870d HTTP/11" 200 38
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '43'}
-    - Data: {
-  "message": "Task marked as complete"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:22:25] "PUT /tasks/complete/9be5c055-977f-4952-b1fa-ea9b80c8870d HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, HEAD, GET, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:22:25] "OPTIONS /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 3
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '3'}
-    - Data: []
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:22:25] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/9be5c055-977f-4952-b1fa-ea9b80c8870d/toggle
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'PUT', 'Access-Control-Request-Headers': 'authorization,content-type', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-ERROR:routes:404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-DEBUG:routes:
-    Response:
-    - Status: 404
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '27', 'Access-Control-Allow-Origin': 'http://localhost:8080', 'Access-Control-Allow-Headers': 'authorization, content-type', 'Access-Control-Allow-Methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'Vary': 'Origin'}
-    - Data: {
-  "error": "Not found"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:22:26] "[33mOPTIONS /tasks/9be5c055-977f-4952-b1fa-ea9b80c8870d/toggle HTTP/1.1[0m" 404 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/complete/9be5c055-977f-4952-b1fa-ea9b80c8870d
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'PUT', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/9be5c055-977f-4952-b1fa-ea9b80c8870d/toggle
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'PUT', 'Access-Control-Request-Headers': 'authorization,content-type', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, OPTIONS'}
-    - Data: 
-    
-ERROR:routes:404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:25:01] "OPTIONS /tasks/complete/9be5c055-977f-4952-b1fa-ea9b80c8870d HTTP/1.1" 200 -
-DEBUG:routes:
-    Response:
-    - Status: 404
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '27', 'Access-Control-Allow-Origin': 'http://localhost:8080', 'Access-Control-Allow-Headers': 'authorization, content-type', 'Access-Control-Allow-Methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'Vary': 'Origin'}
-    - Data: {
-  "error": "Not found"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:25:01] "[33mOPTIONS /tasks/9be5c055-977f-4952-b1fa-ea9b80c8870d/toggle HTTP/1.1[0m" 404 -
-DEBUG:routes:
-    Request:
-    - Method: PUT
-    - URL: http://127.0.0.1:5000/tasks/complete/9be5c055-977f-4952-b1fa-ea9b80c8870d
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Content-Length': '0', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "PUT /tasks/complete/9be5c055-977f-4952-b1fa-ea9b80c8870d HTTP/11" 200 38
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '43'}
-    - Data: {
-  "message": "Task marked as complete"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:25:01] "PUT /tasks/complete/9be5c055-977f-4952-b1fa-ea9b80c8870d HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, HEAD, GET, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:25:01] "OPTIONS /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 3
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '3'}
-    - Data: []
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:25:01] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/complete/9be5c055-977f-4952-b1fa-ea9b80c8870d
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'PUT', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:26:52] "OPTIONS /tasks/complete/9be5c055-977f-4952-b1fa-ea9b80c8870d HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: PUT
-    - URL: http://127.0.0.1:5000/tasks/complete/9be5c055-977f-4952-b1fa-ea9b80c8870d
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Content-Length': '0', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "PUT /tasks/complete/9be5c055-977f-4952-b1fa-ea9b80c8870d HTTP/11" 200 38
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '43'}
-    - Data: {
-  "message": "Task marked as complete"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:26:52] "PUT /tasks/complete/9be5c055-977f-4952-b1fa-ea9b80c8870d HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, HEAD, GET, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:26:52] "OPTIONS /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 3
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '3'}
-    - Data: []
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:26:52] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/9be5c055-977f-4952-b1fa-ea9b80c8870d/toggle
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'PUT', 'Access-Control-Request-Headers': 'authorization,content-type', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-ERROR:routes:404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-DEBUG:routes:
-    Response:
-    - Status: 404
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '27', 'Access-Control-Allow-Origin': 'http://localhost:8080', 'Access-Control-Allow-Headers': 'authorization, content-type', 'Access-Control-Allow-Methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'Vary': 'Origin'}
-    - Data: {
-  "error": "Not found"
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:26:52] "[33mOPTIONS /tasks/9be5c055-977f-4952-b1fa-ea9b80c8870d/toggle HTTP/1.1[0m" 404 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, HEAD, GET, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:26:59] "OPTIONS /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'HEAD, GET, POST, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:26:59] "OPTIONS /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for status: pending, user: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 3
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '3'}
-    - Data: []
-
-    
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 13
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:26:59] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '18'}
-    - Data: {
-  "tasks": []
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:26:59] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'HEAD, GET, POST, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:27:03] "OPTIONS /tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for status: completed, user: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 1573
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '1991'}
-    - Data: {
-  "tasks": [
-    {
-      "completed_at": "Fri, 15 Nov 2024 08:21:28 GMT",
-      "created_at": "Fri, 15 Nov 2024 08:01:15 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:06:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "e03732f5-8a7a-4b77-9782-f5ebd125ae23",
-      "task_text": "",
-      "time_remaining": 0,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    },
-    {
-      "completed_at": "Fri, 15 Nov 2024 08:26:52 GMT",
-      "created_at": "Fri, 15 Nov 2024 08:21:54 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:26:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "9be5c055-977f-4952-b1fa-ea9b80c8870d",
-      "task_text": "now",
-      "time_remaining": 0,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    },
-    {
-      "completed_at": "Fri, 15 Nov 2024 08:21:29 GMT",
-      "created_at": "Fri, 15 Nov 2024 08:00:57 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:30:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "437e99eb-c0e4-4113-805c-7a9fc91aae3e",
-      "task_text": "Checking ",
-      "time_remaining": 0,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    },
-    {
-      "completed_at": "Fri, 15 Nov 2024 08:21:43 GMT",
-      "created_at": "Fri, 15 Nov 2024 08:01:30 GMT",
-      "deadline": "Fri, 15 Nov 2024 20:10:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "a75b3a21-5706-4ddb-a06d-fdff8bbf8362",
-      "task_text": "checking",
-      "time_remaining": 24176.542741,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    },
-    {
-      "completed_at": "Fri, 15 Nov 2024 07:53:16 GMT",
-      "created_at": "Fri, 15 Nov 2024 07:52:57 GMT",
-      "deadline": "Fri, 15 Nov 2024 20:54:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "441e5c28-987a-4939-b205-8a580e9dc46d",
-      "task_text": "an apple ",
-      "time_remaining": 26816.542734,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    }
-  ]
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:27:03] "GET /tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for status: completed, user: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 1573
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '1991'}
-    - Data: {
-  "tasks": [
-    {
-      "completed_at": "Fri, 15 Nov 2024 08:21:28 GMT",
-      "created_at": "Fri, 15 Nov 2024 08:01:15 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:06:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "e03732f5-8a7a-4b77-9782-f5ebd125ae23",
-      "task_text": "",
-      "time_remaining": 0,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    },
-    {
-      "completed_at": "Fri, 15 Nov 2024 08:26:52 GMT",
-      "created_at": "Fri, 15 Nov 2024 08:21:54 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:26:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "9be5c055-977f-4952-b1fa-ea9b80c8870d",
-      "task_text": "now",
-      "time_remaining": 0,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    },
-    {
-      "completed_at": "Fri, 15 Nov 2024 08:21:29 GMT",
-      "created_at": "Fri, 15 Nov 2024 08:00:57 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:30:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "437e99eb-c0e4-4113-805c-7a9fc91aae3e",
-      "task_text": "Checking ",
-      "time_remaining": 0,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    },
-    {
-      "completed_at": "Fri, 15 Nov 2024 08:21:43 GMT",
-      "created_at": "Fri, 15 Nov 2024 08:01:30 GMT",
-      "deadline": "Fri, 15 Nov 2024 20:10:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "a75b3a21-5706-4ddb-a06d-fdff8bbf8362",
-      "task_text": "checking",
-      "time_remaining": 24175.147735,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    },
-    {
-      "completed_at": "Fri, 15 Nov 2024 07:53:16 GMT",
-      "created_at": "Fri, 15 Nov 2024 07:52:57 GMT",
-      "deadline": "Fri, 15 Nov 2024 20:54:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "441e5c28-987a-4939-b205-8a580e9dc46d",
-      "task_text": "an apple ",
-      "time_remaining": 26815.147731,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    }
-  ]
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:27:04] "GET /tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for status: completed, user: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 1573
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '1991'}
-    - Data: {
-  "tasks": [
-    {
-      "completed_at": "Fri, 15 Nov 2024 08:21:28 GMT",
-      "created_at": "Fri, 15 Nov 2024 08:01:15 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:06:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "e03732f5-8a7a-4b77-9782-f5ebd125ae23",
-      "task_text": "",
-      "time_remaining": 0,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    },
-    {
-      "completed_at": "Fri, 15 Nov 2024 08:26:52 GMT",
-      "created_at": "Fri, 15 Nov 2024 08:21:54 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:26:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "9be5c055-977f-4952-b1fa-ea9b80c8870d",
-      "task_text": "now",
-      "time_remaining": 0,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    },
-    {
-      "completed_at": "Fri, 15 Nov 2024 08:21:29 GMT",
-      "created_at": "Fri, 15 Nov 2024 08:00:57 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:30:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "437e99eb-c0e4-4113-805c-7a9fc91aae3e",
-      "task_text": "Checking ",
-      "time_remaining": 0,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    },
-    {
-      "completed_at": "Fri, 15 Nov 2024 08:21:43 GMT",
-      "created_at": "Fri, 15 Nov 2024 08:01:30 GMT",
-      "deadline": "Fri, 15 Nov 2024 20:10:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "a75b3a21-5706-4ddb-a06d-fdff8bbf8362",
-      "task_text": "checking",
-      "time_remaining": 24174.580228,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    },
-    {
-      "completed_at": "Fri, 15 Nov 2024 07:53:16 GMT",
-      "created_at": "Fri, 15 Nov 2024 07:52:57 GMT",
-      "deadline": "Fri, 15 Nov 2024 20:54:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "441e5c28-987a-4939-b205-8a580e9dc46d",
-      "task_text": "an apple ",
-      "time_remaining": 26814.580224,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    }
-  ]
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:27:05] "GET /tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for status: completed, user: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 1573
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '1991'}
-    - Data: {
-  "tasks": [
-    {
-      "completed_at": "Fri, 15 Nov 2024 08:21:28 GMT",
-      "created_at": "Fri, 15 Nov 2024 08:01:15 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:06:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "e03732f5-8a7a-4b77-9782-f5ebd125ae23",
-      "task_text": "",
-      "time_remaining": 0,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    },
-    {
-      "completed_at": "Fri, 15 Nov 2024 08:26:52 GMT",
-      "created_at": "Fri, 15 Nov 2024 08:21:54 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:26:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "9be5c055-977f-4952-b1fa-ea9b80c8870d",
-      "task_text": "now",
-      "time_remaining": 0,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    },
-    {
-      "completed_at": "Fri, 15 Nov 2024 08:21:29 GMT",
-      "created_at": "Fri, 15 Nov 2024 08:00:57 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:30:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "437e99eb-c0e4-4113-805c-7a9fc91aae3e",
-      "task_text": "Checking ",
-      "time_remaining": 0,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    },
-    {
-      "completed_at": "Fri, 15 Nov 2024 08:21:43 GMT",
-      "created_at": "Fri, 15 Nov 2024 08:01:30 GMT",
-      "deadline": "Fri, 15 Nov 2024 20:10:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "a75b3a21-5706-4ddb-a06d-fdff8bbf8362",
-      "task_text": "checking",
-      "time_remaining": 24171.763231,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    },
-    {
-      "completed_at": "Fri, 15 Nov 2024 07:53:16 GMT",
-      "created_at": "Fri, 15 Nov 2024 07:52:57 GMT",
-      "deadline": "Fri, 15 Nov 2024 20:54:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "441e5c28-987a-4939-b205-8a580e9dc46d",
-      "task_text": "an apple ",
-      "time_remaining": 26811.763228,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    }
-  ]
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:27:08] "GET /tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'PUT, HEAD, GET, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:27:10] "OPTIONS /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'HEAD, GET, POST, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:27:10] "OPTIONS /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks/0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for status: pending, user: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:routes:Get tasks request received for user - api gateway: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 3
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 13
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '3'}
-    - Data: []
-
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '18'}
-    - Data: {
-  "tasks": []
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:27:10] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:27:10] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'HEAD, GET, POST, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:27:12] "OPTIONS /tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for status: completed, user: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 1572
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '1990'}
-    - Data: {
-  "tasks": [
-    {
-      "completed_at": "Fri, 15 Nov 2024 08:21:28 GMT",
-      "created_at": "Fri, 15 Nov 2024 08:01:15 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:06:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "e03732f5-8a7a-4b77-9782-f5ebd125ae23",
-      "task_text": "",
-      "time_remaining": 0,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    },
-    {
-      "completed_at": "Fri, 15 Nov 2024 08:26:52 GMT",
-      "created_at": "Fri, 15 Nov 2024 08:21:54 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:26:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "9be5c055-977f-4952-b1fa-ea9b80c8870d",
-      "task_text": "now",
-      "time_remaining": 0,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    },
-    {
-      "completed_at": "Fri, 15 Nov 2024 08:21:29 GMT",
-      "created_at": "Fri, 15 Nov 2024 08:00:57 GMT",
-      "deadline": "Fri, 15 Nov 2024 08:30:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "437e99eb-c0e4-4113-805c-7a9fc91aae3e",
-      "task_text": "Checking ",
-      "time_remaining": 0,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    },
-    {
-      "completed_at": "Fri, 15 Nov 2024 08:21:43 GMT",
-      "created_at": "Fri, 15 Nov 2024 08:01:30 GMT",
-      "deadline": "Fri, 15 Nov 2024 20:10:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "a75b3a21-5706-4ddb-a06d-fdff8bbf8362",
-      "task_text": "checking",
-      "time_remaining": 24167.81325,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    },
-    {
-      "completed_at": "Fri, 15 Nov 2024 07:53:16 GMT",
-      "created_at": "Fri, 15 Nov 2024 07:52:57 GMT",
-      "deadline": "Fri, 15 Nov 2024 20:54:00 GMT",
-      "is_completed": 1,
-      "reminder": null,
-      "task_id": "441e5c28-987a-4939-b205-8a580e9dc46d",
-      "task_text": "an apple ",
-      "time_remaining": 26807.813247,
-      "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
-    }
-  ]
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:27:12] "GET /tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for status: pending, user: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 13
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '18'}
-    - Data: {
-  "tasks": []
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:27:14] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: OPTIONS
-    - URL: http://127.0.0.1:5000/tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'GET', 'Access-Control-Request-Headers': 'authorization', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'HEAD, GET, POST, OPTIONS'}
-    - Data: 
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:27:15] "OPTIONS /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-DEBUG:routes:
-    Request:
-    - Method: GET
-    - URL: http://127.0.0.1:5000/tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f
-    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Sec-Ch-Ua-Platform': '"macOS"', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGYwZTk0ZGEtODg3Yy00YmExLTg0ODktNTM1MTllZjQzNThmIiwiZW1haWwiOiJhdmluYXNobmFuZHlhbGE5MjFAZ21haWwuY29tIiwiZXhwIjoxNzMxNzYxMzEyfQ.W2370ZApqMPwy3A1s28fQi63Q7RluwfyVNILroRbpIk', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-    - Data: None
-    
-DEBUG:routes:Get tasks request received for status: pending, user: 0f0e94da-887c-4ba1-8489-53519ef4358f
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5002
-DEBUG:urllib3.connectionpool:http://localhost:5002 "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/11" 200 13
-DEBUG:routes:
-    Response:
-    - Status: 200
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '18'}
-    - Data: {
-  "tasks": []
-}
-
-    
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:27:15] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 08:39:58] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -

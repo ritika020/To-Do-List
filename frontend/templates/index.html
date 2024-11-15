@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List</title>
+    <title>Task Planner</title>
+    <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+    <link rel="icon" type="image/png" href="../static/favicon.png">
     <link rel="stylesheet" href="../static/css/style.css">
     <script>
         if (!localStorage.getItem('token')) {
@@ -14,7 +16,10 @@
 <body>
     <div class="container">
         <header>
-            <h1>My Todo List</h1>
+            <div class="logo">
+                <div class="logo-letter">T</div>
+            </div>
+            <h1>Task Planner</h1>
             <button id="logoutBtn">Logout</button>
         </header>
 

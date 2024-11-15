@@ -128,20 +128,51 @@ body {
 
 /* Tabs */
 .tabs {
-    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
 }
 
-.tab-btn {
-    padding: 0.5rem 1rem;
-    border: none;
-    background: none;
+.tab {
+    padding: 0.75rem 1.5rem;
     cursor: pointer;
+    position: relative;
+    color: var(--text-color);
     opacity: 0.7;
+    transition: all 0.3s ease;
 }
 
-.tab-btn.active {
+.tab.active {
     opacity: 1;
-    border-bottom: 2px solid var(--primary-color);
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.tab-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+    opacity: 1;
+}
+
+.no-tasks {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-style: italic;
 }
 
 .hidden {
@@ -304,4 +335,60 @@ input[type="datetime-local"] {
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 14px;
+}
+
+/* Logo styles */
+.logo {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.logo-letter {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-letter:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+.logo-letter::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    border-radius: inherit;
+}
+
+/* Update header styles */
+header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    margin: 0;
+    flex: 1;
+    font-size: 1.5rem;
+    color: var(--text-color);
 } 
