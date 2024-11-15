@@ -327,9 +327,17 @@ function switchTab(tabName) {
 // Function to load tasks for a specific tab
 async function loadTasks(status) {
     try {
-        const response = await fetch(`${API_URL}/tasks?status=${status}`, {
+        const token = localStorage.getItem('token');
+        const userId = localStorage.getItem('userId');
+        
+        if (!token || !userId) {
+            window.location.href = '/login';
+            return;
+        }
+
+        const response = await fetch(`${API_URL}/tasks?status=${status}&user_id=${userId}`, {
             headers: {
-                'Authorization': `Bearer ${localStorage.getItem('token')}`
+                'Authorization': `Bearer ${token}`
             }
         });
 
@@ -347,10 +355,13 @@ async function loadTasks(status) {
                 const taskElement = createTaskElement(task);
                 tasksContainer.appendChild(taskElement);
             });
+        } else {
+            const error = await response.json();
+            showError(error.error || 'Failed to load tasks');
         }
     } catch (error) {
+        console.error('Error fetching tasks:', error);
         showError('Failed to load tasks');
-        console.error('Error:', error);
     }
 }
 

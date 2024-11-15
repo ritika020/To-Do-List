@@ -88,6 +88,7 @@ def create_task():
 @token_required
 def get_tasks(user_id):
     try:
+        logger.debug(f"Get tasks request received for user - api gateway: {user_id}")
         response = requests.get(
             f"{app.config['TASK_SERVICE_URL']}/tasks/{user_id}"
         )
@@ -124,6 +125,23 @@ def update_task(task_id):
         response = requests.put(
             f"{app.config['TASK_SERVICE_URL']}/tasks/{task_id}", 
             json=request.get_json()
+        )
+        return handle_service_error(response)
+    except requests.exceptions.ConnectionError:
+        return jsonify({'error': 'Task service unavailable'}), 503
+
+@app.route('/tasks', methods=['GET'])
+@token_required
+def get_tasks_by_status():
+    try:
+        status = request.args.get('status', 'pending')
+        user_id = request.args.get('user_id')
+        
+        logger.debug(f"Get tasks request received for status: {status}, user: {user_id}")
+        
+        response = requests.get(
+            f"{app.config['TASK_SERVICE_URL']}/tasks",
+            params={'status': status, 'user_id': user_id}
         )
         return handle_service_error(response)
     except requests.exceptions.ConnectionError:

@@ -124,5 +124,40 @@ def update_task(task_id):
         cursor.close()
         conn.close()
 
+@app.route('/tasks', methods=['GET'])
+def get_tasks_by_status():
+    status = request.args.get('status', 'pending')
+    user_id = request.args.get('user_id')
+    
+    if not user_id:
+        return jsonify({'error': 'User ID is required'}), 400
+
+    conn = get_db_connection()
+    cursor = conn.cursor(dictionary=True)
+
+    try:
+        # Convert status to boolean for is_completed field
+        is_completed = status == 'completed'
+        
+        cursor.execute("""
+            SELECT * FROM tasks 
+            WHERE user_id = %s AND is_completed = %s
+            ORDER BY 
+                CASE 
+                    WHEN deadline IS NOT NULL THEN deadline 
+                    ELSE created_at 
+                END ASC
+        """, (user_id, is_completed))
+        
+        tasks = cursor.fetchall()
+        return jsonify({
+            'tasks': [format_task_response(task) for task in tasks]
+        }), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+    finally:
+        cursor.close()
+        conn.close()
+
 if __name__ == '__main__':
     app.run(port=5002)
