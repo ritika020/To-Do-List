@@ -47,8 +47,8 @@ The application consists of multiple microservices:
 ### Using the Service Manager
 
 1. Make the script executable:
-   ```
-chmod +x manage_services.sh
+   ``` bash
+   chmod +x manage_services.sh
    ```
 
 2. Available commands:
