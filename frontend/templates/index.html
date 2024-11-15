@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Todo List</h1>
+            <button id="logoutBtn">Logout</button>
+        </header>
+
+        <div class="task-input-container">
+            <form id="taskForm">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    placeholder="Enter your task..." 
+                    autocomplete="off"
+                >
+                <div id="suggestions" class="suggestions"></div>
+                <input 
+                    type="datetime-local" 
+                    id="deadline"
+                >
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="active">Active Tasks</button>
+            <button class="tab-btn" data-tab="completed">Completed Tasks</button>
+        </div>
+
+        <div id="activeTasks" class="task-list">
+            <!-- Active tasks will be inserted here -->
+        </div>
+
+        <div id="completedTasks" class="task-list hidden">
+            <!-- Completed tasks will be inserted here -->
+        </div>
+    </div>
+    <script src="../static/js/tasks.js"></script>
+    <script src="../static/js/suggestions.js"></script>
+</body>
+</html> 
