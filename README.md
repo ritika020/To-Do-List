@@ -24,12 +24,11 @@ The application consists of multiple microservices:
 
 1. Install MySQL:
     ```bash
-    sudo apt-get update
-    sudo apt-get install mysql-server
+    brew install mysql-server
     ```
 2. Start the MySQL service:
     ```bash
-    sudo systemctl start mysql
+    brew services start mysql
     ```
 4. Create the database and user:
     ```bash
@@ -48,22 +47,36 @@ The application consists of multiple microservices:
 ### Using the Service Manager
 
 1. Make the script executable:
-   ```bash
-   chmod +x manage_services.sh
+   ```
+chmod +x manage_services.sh
    ```
 
 2. Available commands:
-bash
+
 Start all services
+``` bash
 ./manage_services.sh start
+```
+
 Stop all services
+``` bash
 ./manage_services.sh stop
+```
+
 Restart all services
+``` bash
 ./manage_services.sh restart
+```
+
 Check status of all services
+``` bash
 ./manage_services.sh status
+```
+
 View logs for a specific service
+``` bash
 ./manage_services.sh logs <service_name>
+```
 
 ### Service URLs
 When services are running, they will be available at:
