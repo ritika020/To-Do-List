@@ -9,26 +9,77 @@ WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 333-893-474
 DEBUG:routes:
     Request:
+    - Method: OPTIONS
+    - URL: http://127.0.0.1:5000/auth/register
+    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'POST', 'Access-Control-Request-Headers': 'content-type', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
+    - Data: None
+    
+DEBUG:routes:
+    Response:
+    - Status: 200
+    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'OPTIONS, POST'}
+    - Data: 
+    
+INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 07:31:55] "OPTIONS /auth/register HTTP/1.1" 200 -
+DEBUG:routes:
+    Request:
     - Method: POST
     - URL: http://127.0.0.1:5000/auth/register
-    - Headers: {'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/7.42.0', 'Accept': '*/*', 'Postman-Token': 'f83ea9c5-111f-4cf8-b716-72f1da6a9202', 'Host': '127.0.0.1:5000', 'Accept-Encoding': 'gzip, deflate, br', 'Connection': 'keep-alive', 'Content-Length': '110'}
-    - Data: {'email': 'test1@gmail.com', 'password': 'Chintu2000@', 'name': 'Avinash', 'gender': 'Male'}
+    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Content-Length': '91', 'Sec-Ch-Ua-Platform': '"macOS"', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Content-Type': 'application/json', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
+    - Data: {'email': 'avinashnandyala921@gmail.com', 'password': 'Chintu2000@', 'name': 'Avi', 'gender': 'M'}
     
-DEBUG:routes:Registration request received with data: {'email': 'test1@gmail.com', 'password': 'Chintu2000@', 'name': 'Avinash', 'gender': 'Male'}
+DEBUG:routes:Registration request received with data: {'email': 'avinashnandyala921@gmail.com', 'password': 'Chintu2000@', 'name': 'Avi', 'gender': 'M'}
 DEBUG:routes:Sending request to auth service at: http://localhost:5001
 DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5001
-DEBUG:urllib3.connectionpool:http://localhost:5001 "POST /register HTTP/11" 409 42
-DEBUG:routes:Auth service response: 409 - {
-  "error": "Email already registered"
+DEBUG:urllib3.connectionpool:http://localhost:5001 "POST /register HTTP/11" 201 96
+DEBUG:routes:Auth service response: 201 - {
+  "message": "Registration successful",
+  "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
 }
 
 DEBUG:routes:
     Response:
-    - Status: 409
-    - Headers: {'Content-Type': 'application/json', 'Content-Length': '42'}
+    - Status: 201
+    - Headers: {'Content-Type': 'application/json', 'Content-Length': '96'}
     - Data: {
-  "error": "Email already registered"
+  "message": "Registration successful",
+  "user_id": "0f0e94da-887c-4ba1-8489-53519ef4358f"
 }
 
     
-INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 06:50:15] "[31m[1mPOST /auth/register HTTP/1.1[0m" 409 -
+INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 07:31:56] "[35m[1mPOST /auth/register HTTP/1.1[0m" 201 -
+DEBUG:routes:
+    Request:
+    - Method: OPTIONS
+    - URL: http://127.0.0.1:5000/auth/login
+    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Accept': '*/*', 'Access-Control-Request-Method': 'POST', 'Access-Control-Request-Headers': 'content-type', 'Origin': 'http://localhost:8080', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
+    - Data: None
+    
+DEBUG:routes:
+    Response:
+    - Status: 200
+    - Headers: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'OPTIONS, POST'}
+    - Data: 
+    
+INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 07:32:14] "OPTIONS /auth/login HTTP/1.1" 200 -
+DEBUG:routes:
+    Request:
+    - Method: POST
+    - URL: http://127.0.0.1:5000/auth/login
+    - Headers: {'Host': '127.0.0.1:5000', 'Connection': 'keep-alive', 'Content-Length': '65', 'Sec-Ch-Ua-Platform': '"macOS"', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', 'Content-Type': 'application/json', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*', 'Origin': 'http://localhost:8080', 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Referer': 'http://localhost:8080/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'}
+    - Data: {'email': 'avinashnandyala921@gmail.com', 'password': 'Chintu2000@'}
+    
+DEBUG:routes:Login request received with data: {'email': 'avinashnandyala921@gmail.com', 'password': 'Chintu2000@'}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:5001
+DEBUG:urllib3.connectionpool:http://localhost:5001 "POST /login HTTP/11" 404 207
+DEBUG:routes:Login response: 404
+DEBUG:routes:
+    Response:
+    - Status: 503
+    - Headers: {'Content-Type': 'application/json', 'Content-Length': '37'}
+    - Data: {
+  "error": "Service unavailable"
+}
+
+    
+INFO:werkzeug:127.0.0.1 - - [15/Nov/2024 07:32:14] "[35m[1mPOST /auth/login HTTP/1.1[0m" 503 -
