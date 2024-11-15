@@ -53,27 +53,27 @@ The application consists of multiple microservices:
 
 2. Available commands:
 
-Start all services
+a. Start all services
 ``` bash
 ./manage_services.sh start
 ```
 
-Stop all services
+b. Stop all services
 ``` bash
 ./manage_services.sh stop
 ```
 
-Restart all services
+c. Restart all services
 ``` bash
 ./manage_services.sh restart
 ```
 
-Check status of all services
+d. Check status of all services
 ``` bash
 ./manage_services.sh status
 ```
 
-View logs for a specific service
+e. View logs for a specific service
 ``` bash
 ./manage_services.sh logs <service_name>
 ```
