@@ -626,4 +626,11 @@ header h1 {
 
 .completion-status.late {
     color: #dc3545;
+}
+
+.auth-logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 64px;  /* Adjust size as needed */
+    height: 64px; /* Adjust size as needed */
 } 
