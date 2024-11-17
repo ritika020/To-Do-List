@@ -54,7 +54,7 @@ function createTaskElement(task) {
     taskElement.dataset.taskId = task.task_id;
     taskElement.dataset.deadline = task.deadline || '';
     
-    const timeInfo = task.deadline ? calculateTimeRemaining(task.deadline) : null;
+    const timeInfo = task.deadline ? calculateTimeRemaining(task.deadline, task.completed_at) : null;
     
     taskElement.innerHTML = `
         <div class="task-select">
@@ -68,6 +68,11 @@ function createTaskElement(task) {
                         <div class="progress-bar-fill" style="width: ${timeInfo.isLate ? '100' : '50'}%"></div>
                     </div>
                     <small class="${timeInfo.isLate ? 'late-text' : ''}">${timeInfo.text}</small>
+                    ${task.is_completed ? `
+                        <small class="completion-status">
+                            ${timeInfo.completionStatus}
+                        </small>
+                    ` : ''}
                 </div>
             ` : ''}
         </div>
@@ -97,11 +102,57 @@ function createTaskElement(task) {
 }
 
 // Calculate time remaining
-function calculateTimeRemaining(deadline) {
-    const now = new Date();
- 
+function calculateTimeRemaining(deadline, completedAt = null) {
     const deadlineDate = new Date(deadline);
     deadlineDate.setHours(deadlineDate.getHours() + 5);
+    
+    // If task is completed, calculate based on completion time
+    if (completedAt) {
+        const completionDate = new Date(completedAt);
+        const diff = deadlineDate - completionDate;
+        
+        let completionStatus;
+        if (diff > 0) {
+            // Completed early/on time
+            const earlyTime = diff;
+            const earlyDays = Math.floor(earlyTime / (1000 * 60 * 60 * 24));
+            const earlyHours = Math.floor((earlyTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const earlyMinutes = Math.floor((earlyTime % (1000 * 60 * 60)) / (1000 * 60));
+            
+            completionStatus = 'Completed ';
+            if (earlyDays > 0) completionStatus += `${earlyDays}d `;
+            if (earlyHours > 0) completionStatus += `${earlyHours}h `;
+            completionStatus += `${earlyMinutes}m early`;
+            
+            return { 
+                total: diff, 
+                text: 'Completed on time', 
+                isLate: false,
+                completionStatus 
+            };
+        } else {
+            // Completed late
+            const lateTime = Math.abs(diff);
+            const lateDays = Math.floor(lateTime / (1000 * 60 * 60 * 24));
+            const lateHours = Math.floor((lateTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const lateMinutes = Math.floor((lateTime % (1000 * 60 * 60)) / (1000 * 60));
+            
+            completionStatus = 'Completed ';
+            if (lateDays > 0) completionStatus += `${lateDays}d `;
+            if (lateHours > 0) completionStatus += `${lateHours}h `;
+            completionStatus += `${lateMinutes}m late`;
+            
+            return { 
+                total: diff, 
+                text: 'Completed late', 
+                isLate: true,
+                completionStatus 
+            };
+        }
+    }
+    
+    // For incomplete tasks, use existing logic
+    const now = new Date();
     const diff = deadlineDate - now;
     
     if (diff <= 0) {

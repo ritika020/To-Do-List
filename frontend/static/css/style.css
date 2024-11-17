@@ -578,4 +578,19 @@ header h1 {
     padding: 8px;
     background-color: #f8f9fa;
     border-radius: 4px;
+}
+
+.completion-status {
+    display: block;
+    margin-top: 4px;
+    font-style: italic;
+    color: #666;
+}
+
+.completion-status.early {
+    color: #28a745;
+}
+
+.completion-status.late {
+    color: #dc3545;
 } 
