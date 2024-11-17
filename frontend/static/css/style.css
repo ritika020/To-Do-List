@@ -94,9 +94,9 @@ body {
 }
 
 .progress-bar {
-    height: 4px;
+    height: 6px;
     background-color: #e9ecef;
-    border-radius: 2px;
+    border-radius: 3px;
     margin-bottom: 4px;
     overflow: hidden;
 }
@@ -105,10 +105,43 @@ body {
     height: 100%;
     background-color: #2196F3;
     transition: width 0.3s ease;
+    position: relative;
+}
+
+.progress-bar-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(255,255,255,0.1) 0%,
+        rgba(255,255,255,0.2) 50%,
+        rgba(255,255,255,0.1) 100%
+    );
 }
 
 .task-progress.late .progress-bar-fill {
     background-color: #f44336;
+}
+
+/* Add a gradient effect for different percentage ranges */
+.progress-bar-fill[style*="width: 100%"] {
+    background-color: #f44336;
+}
+
+.progress-bar-fill[style*="width: 75%"] {
+    background-color: #ff9800;
+}
+
+.progress-bar-fill[style*="width: 50%"] {
+    background-color: #2196F3;
+}
+
+.progress-bar-fill[style*="width: 25%"] {
+    background-color: #4CAF50;
 }
 
 .late-text {

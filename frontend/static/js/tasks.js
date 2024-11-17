@@ -54,7 +54,7 @@ function createTaskElement(task) {
     taskElement.dataset.taskId = task.task_id;
     taskElement.dataset.deadline = task.deadline || '';
     
-    const timeInfo = task.deadline ? calculateTimeRemaining(task.deadline, task.completed_at) : null;
+    const timeInfo = task.deadline ? calculateTimeRemaining(task.deadline, task.completed_at, task) : null;
     
     taskElement.innerHTML = `
         <div class="task-select">
@@ -65,7 +65,7 @@ function createTaskElement(task) {
             ${timeInfo ? `
                 <div class="task-progress ${timeInfo.isLate ? 'late' : ''}">
                     <div class="progress-bar">
-                        <div class="progress-bar-fill" style="width: ${timeInfo.isLate ? '100' : '50'}%"></div>
+                        <div class="progress-bar-fill" style="width: ${timeInfo.isLate ? '100' : timeInfo.percentage}%"></div>
                     </div>
                     <small class="${timeInfo.isLate ? 'late-text' : ''}">${timeInfo.text}</small>
                     ${task.is_completed ? `
@@ -102,7 +102,7 @@ function createTaskElement(task) {
 }
 
 // Calculate time remaining
-function calculateTimeRemaining(deadline, completedAt = null) {
+function calculateTimeRemaining(deadline, completedAt = null, task = null) {
     const deadlineDate = new Date(deadline);
     
     // If task is completed, calculate based on completion time
@@ -150,13 +150,19 @@ function calculateTimeRemaining(deadline, completedAt = null) {
         }
     }
     
-    // For incomplete tasks, use existing logic
+    // For incomplete tasks
     const now = new Date();
-    const diff = deadlineDate.setHours(deadlineDate.getHours() + 5) - now;
+    // Only use created_at if task object is provided
+    const createdAt = task ? new Date(task.created_at) : now;
+    const totalDuration = deadlineDate - createdAt;
+    const timeLeft = deadlineDate.setHours(deadlineDate.getHours() + 5) - now;
     
-    if (diff <= 0) {
+    // Calculate percentage of time left
+    const percentageLeft = Math.max(0, Math.min(100, (timeLeft / totalDuration) * 100));
+    
+    if (timeLeft <= 0) {
         // Task is late
-        const lateTime = Math.abs(diff);
+        const lateTime = Math.abs(timeLeft);
         const lateDays = Math.floor(lateTime / (1000 * 60 * 60 * 24));
         const lateHours = Math.floor((lateTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const lateMinutes = Math.floor((lateTime % (1000 * 60 * 60)) / (1000 * 60));
@@ -166,20 +172,30 @@ function calculateTimeRemaining(deadline, completedAt = null) {
         if (lateHours > 0) lateText += `${lateHours}h `;
         lateText += `${lateMinutes}m`;
         
-        return { total: diff, text: lateText, isLate: true };
+        return { 
+            total: timeLeft, 
+            text: lateText, 
+            isLate: true,
+            percentage: 0 
+        };
     }
 
     // Task is not late
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
 
     let text = '';
     if (days > 0) text += `${days}d `;
     if (hours > 0) text += `${hours}h `;
-    text += `${minutes}m left`;
+    text += `${minutes}m left (${Math.round(percentageLeft)}%)`;
 
-    return { total: diff, text, isLate: false };
+    return { 
+        total: timeLeft, 
+        text, 
+        isLate: false,
+        percentage: percentageLeft 
+    };
 }
 
 // Add new task
@@ -581,17 +597,15 @@ function startTimeUpdates() {
             const taskElement = progressElement.closest('.task-item');
             const deadlineText = progressElement.querySelector('small').textContent;
             
-            // Only update if there's a deadline
             if (deadlineText) {
-                // Extract deadline from DOM or data attribute
-                const deadline = taskElement.dataset.deadline; // You'll need to add this when creating the task element
+                const deadline = taskElement.dataset.deadline;
                 if (deadline) {
                     const timeInfo = calculateTimeRemaining(deadline);
                     progressElement.classList.toggle('late', timeInfo.isLate);
                     progressElement.querySelector('small').textContent = timeInfo.text;
                     progressElement.querySelector('small').classList.toggle('late-text', timeInfo.isLate);
                     progressElement.querySelector('.progress-bar-fill').style.width = 
-                        timeInfo.isLate ? '100%' : '50%';
+                        timeInfo.isLate ? '100%' : `${timeInfo.percentage}%`;
                 }
             }
         });
