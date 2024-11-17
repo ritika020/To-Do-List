@@ -104,7 +104,6 @@ function createTaskElement(task) {
 // Calculate time remaining
 function calculateTimeRemaining(deadline, completedAt = null) {
     const deadlineDate = new Date(deadline);
-    deadlineDate.setHours(deadlineDate.getHours() + 5);
     
     // If task is completed, calculate based on completion time
     if (completedAt) {
@@ -153,7 +152,7 @@ function calculateTimeRemaining(deadline, completedAt = null) {
     
     // For incomplete tasks, use existing logic
     const now = new Date();
-    const diff = deadlineDate - now;
+    const diff = deadlineDate.setHours(deadlineDate.getHours() + 5) - now;
     
     if (diff <= 0) {
         // Task is late
@@ -190,7 +189,7 @@ document.getElementById('taskForm')?.addEventListener('submit', async (e) => {
     const token = checkAuth();
     const taskText = document.getElementById('taskInput').value;
     const deadline = document.getElementById('deadline').value;
-    console.log(deadline);
+    // console.log(deadline);
     const userId = localStorage.getItem('userId');
 
     try {
@@ -276,7 +275,7 @@ function updateMinDateTime() {
             input.value = minDateTime;
         }
     });
-    console.log(minDateTime);
+    // console.log(minDateTime);
 }
 
 // Call this when page loads and when adding new task form
