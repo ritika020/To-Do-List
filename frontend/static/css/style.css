@@ -89,20 +89,52 @@ body {
 }
 
 .task-progress {
-    flex: 1;
+    margin-top: 8px;
+    font-size: 0.85rem;
 }
 
 .progress-bar {
-    height: 8px;
-    background: #ddd;
-    border-radius: 4px;
+    height: 4px;
+    background-color: #e9ecef;
+    border-radius: 2px;
+    margin-bottom: 4px;
     overflow: hidden;
 }
 
 .progress-bar-fill {
     height: 100%;
-    background: var(--primary-color);
+    background-color: #2196F3;
     transition: width 0.3s ease;
+}
+
+.task-progress.late .progress-bar-fill {
+    background-color: #f44336;
+}
+
+.late-text {
+    color: #f44336;
+    font-weight: 500;
+}
+
+.task-content {
+    flex: 1;
+    min-width: 0; /* Prevents flex item from overflowing */
+}
+
+.task-content p {
+    margin-bottom: 4px;
+    word-break: break-word;
+}
+
+/* Add animation for progress bar */
+@keyframes progress-animation {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.task-progress.late .progress-bar-fill {
+    animation: progress-animation 2s ease-in-out infinite;
 }
 
 .suggestions {

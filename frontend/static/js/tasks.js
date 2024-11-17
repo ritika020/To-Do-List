@@ -20,9 +20,9 @@ async function fetchTasks() {
                 'Authorization': `Bearer ${token}`
             }
         });
-        console.log(response);
+        // console.log(response);
         const tasks = await response.json();
-        console.log(tasks);
+        // console.log(tasks);
         renderTasks(tasks);
     } catch (error) {
         console.error('Error fetching tasks:', error);
@@ -52,24 +52,22 @@ function createTaskElement(task) {
     const taskElement = document.createElement('div');
     taskElement.className = 'task-item';
     taskElement.dataset.taskId = task.task_id;
+    taskElement.dataset.deadline = task.deadline || '';
     
-    const timeRemaining = task.deadline ? calculateTimeRemaining(task.deadline) : null;
-    const progressWidth = timeRemaining ? 
-        Math.max(0, Math.min(100, (timeRemaining.total / (task.deadline - task.created_at)) * 100)) : 
-        100;
-
+    const timeInfo = task.deadline ? calculateTimeRemaining(task.deadline) : null;
+    
     taskElement.innerHTML = `
         <div class="task-select">
             <input type="checkbox" class="task-checkbox">
         </div>
         <div class="task-content">
             <p>${task.task_text}</p>
-            ${timeRemaining ? `
-                <div class="task-progress">
+            ${timeInfo ? `
+                <div class="task-progress ${timeInfo.isLate ? 'late' : ''}">
                     <div class="progress-bar">
-                        <div class="progress-bar-fill" style="width: ${progressWidth}%"></div>
+                        <div class="progress-bar-fill" style="width: ${timeInfo.isLate ? '100' : '50'}%"></div>
                     </div>
-                    <small>${timeRemaining.text}</small>
+                    <small class="${timeInfo.isLate ? 'late-text' : ''}">${timeInfo.text}</small>
                 </div>
             ` : ''}
         </div>
@@ -101,11 +99,27 @@ function createTaskElement(task) {
 // Calculate time remaining
 function calculateTimeRemaining(deadline) {
     const now = new Date();
+ 
     const deadlineDate = new Date(deadline);
+    deadlineDate.setHours(deadlineDate.getHours() + 5);
     const diff = deadlineDate - now;
+    
+    if (diff <= 0) {
+        // Task is late
+        const lateTime = Math.abs(diff);
+        const lateDays = Math.floor(lateTime / (1000 * 60 * 60 * 24));
+        const lateHours = Math.floor((lateTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const lateMinutes = Math.floor((lateTime % (1000 * 60 * 60)) / (1000 * 60));
+        
+        let lateText = 'Late by ';
+        if (lateDays > 0) lateText += `${lateDays}d `;
+        if (lateHours > 0) lateText += `${lateHours}h `;
+        lateText += `${lateMinutes}m`;
+        
+        return { total: diff, text: lateText, isLate: true };
+    }
 
-    if (diff <= 0) return { total: 0, text: 'Expired' };
-
+    // Task is not late
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
@@ -113,9 +127,9 @@ function calculateTimeRemaining(deadline) {
     let text = '';
     if (days > 0) text += `${days}d `;
     if (hours > 0) text += `${hours}h `;
-    text += `${minutes}m`;
+    text += `${minutes}m left`;
 
-    return { total: diff, text };
+    return { total: diff, text, isLate: false };
 }
 
 // Add new task
@@ -125,6 +139,7 @@ document.getElementById('taskForm')?.addEventListener('submit', async (e) => {
     const token = checkAuth();
     const taskText = document.getElementById('taskInput').value;
     const deadline = document.getElementById('deadline').value;
+    console.log(deadline);
     const userId = localStorage.getItem('userId');
 
     try {
@@ -210,6 +225,7 @@ function updateMinDateTime() {
             input.value = minDateTime;
         }
     });
+    console.log(minDateTime);
 }
 
 // Call this when page loads and when adding new task form
@@ -507,3 +523,32 @@ function updateSelectAllCheckbox() {
     const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
     selectAllCheckbox.checked = allChecked;
 }
+
+// Modified time updates function
+function startTimeUpdates() {
+    setInterval(() => {
+        document.querySelectorAll('.task-progress').forEach(progressElement => {
+            const taskElement = progressElement.closest('.task-item');
+            const deadlineText = progressElement.querySelector('small').textContent;
+            
+            // Only update if there's a deadline
+            if (deadlineText) {
+                // Extract deadline from DOM or data attribute
+                const deadline = taskElement.dataset.deadline; // You'll need to add this when creating the task element
+                if (deadline) {
+                    const timeInfo = calculateTimeRemaining(deadline);
+                    progressElement.classList.toggle('late', timeInfo.isLate);
+                    progressElement.querySelector('small').textContent = timeInfo.text;
+                    progressElement.querySelector('small').classList.toggle('late-text', timeInfo.isLate);
+                    progressElement.querySelector('.progress-bar-fill').style.width = 
+                        timeInfo.isLate ? '100%' : '50%';
+                }
+            }
+        });
+    }, 60000); // Update every minute
+}
+
+// Call this when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    startTimeUpdates();
+});
