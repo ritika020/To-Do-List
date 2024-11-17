@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../static/css/style.css">
     <script>
         if (!localStorage.getItem('token')) {
-            window.location.href = '/login';
+            window.location.href = '/templates/login.html';
         }
     </script>
 </head>
@@ -20,7 +20,10 @@
                 <div class="logo-letter">T</div>
             </div>
             <h1>Task Planner</h1>
-            <button id="logoutBtn">Logout</button>
+            <form id="logoutForm">
+                <button type="submit">Logout</button>
+               
+            </form>
         </header>
 
         <div class="task-input-container">
@@ -55,5 +58,6 @@
     </div>
     <script src="../static/js/tasks.js"></script>
     <script src="../static/js/suggestions.js"></script>
+    <script src="../static/js/auth.js"></script>
 </body>
 </html> 

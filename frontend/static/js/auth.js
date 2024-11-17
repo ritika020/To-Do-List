@@ -1,4 +1,4 @@
-const API_URL = 'http://127.0.0.1:5000';
+// const API_URL = 'http://127.0.0.1:5000';
 
 // Login functionality
 document.getElementById('loginForm')?.addEventListener('submit', async (e) => {
@@ -6,12 +6,12 @@ document.getElementById('loginForm')?.addEventListener('submit', async (e) => {
     
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
+    const submitButton = e.target.querySelector('button');
 
     try {
-        const button = e.target.querySelector('button');
-        button.classList.add('loading');
+        submitButton.classList.add('loading');
 
-        const response = await fetch(`${API_URL}/auth/login`, {
+        const response = await fetch(`http://127.0.0.1:5000/auth/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -24,14 +24,14 @@ document.getElementById('loginForm')?.addEventListener('submit', async (e) => {
         if (response.ok) {
             localStorage.setItem('token', data.token);
             localStorage.setItem('userId', data.user_id);
-            window.location.href = '/';
+            window.location.href = '/templates/index.html';
         } else {
             showError(data.error);
         }
     } catch (error) {
         showError('An error occurred during login');
     } finally {
-        button.classList.remove('loading');
+        submitButton.classList.remove('loading');
     }
 });
 
@@ -65,7 +65,7 @@ document.getElementById('registerForm')?.addEventListener('submit', async (e) =>
         button.classList.add('loading');
         button.textContent = 'Registering...';
 
-        const response = await fetch(`${API_URL}/auth/register`, {
+        const response = await fetch(`http://127.0.0.1:5000/auth/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -247,8 +247,18 @@ document.getElementById('confirmPassword')?.addEventListener('input', (e) => {
 });
 
 // Logout functionality
-document.getElementById('logoutBtn')?.addEventListener('click', () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('userId');
-    window.location.href = '/login';
+document.getElementById('logoutForm')?.addEventListener('submit', (e) => {
+    // e.preventDefault();
+    try{
+        console.log('Logging out');
+        localStorage.removeItem('token');
+        localStorage.removeItem('userId');
+
+        window.location.href = 'login.html';
+        console.log('Logged out');
+    } catch (error) {
+        console.error('Error logging out:', error);
+    }
+
+    
 }); 

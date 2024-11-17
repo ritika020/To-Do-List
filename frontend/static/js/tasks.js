@@ -20,8 +20,9 @@ async function fetchTasks() {
                 'Authorization': `Bearer ${token}`
             }
         });
-
+        console.log(response);
         const tasks = await response.json();
+        console.log(tasks);
         renderTasks(tasks);
     } catch (error) {
         console.error('Error fetching tasks:', error);
@@ -30,18 +31,18 @@ async function fetchTasks() {
 
 // Render tasks
 function renderTasks(tasks) {
-    const activeTasksContainer = document.getElementById('activeTasks');
+    const pendingTasksContainer = document.getElementById('pendingTasks');
     const completedTasksContainer = document.getElementById('completedTasks');
     
-    activeTasksContainer.innerHTML = '';
+    pendingTasksContainer.innerHTML = '';
     completedTasksContainer.innerHTML = '';
 
     tasks.forEach(task => {
         const taskElement = createTaskElement(task);
-        if (task.is_completed) {
+        if (task.is_completed) {    
             completedTasksContainer.appendChild(taskElement);
         } else {
-            activeTasksContainer.appendChild(taskElement);
+            pendingTasksContainer.appendChild(taskElement);
         }
     });
 }
