@@ -263,9 +263,9 @@ function createTaskForm() {
 }
 
 // Modify the toggleTaskStatus function
-async function toggleTaskStatus(taskId, currentStatus) {
+async function toggleTaskStatus(taskId) {
     try {
-        const response = await fetch(`http://127.0.0.1:5000/tasks/${taskId}/toggle`, {
+        const response = await fetch(`http://127.0.0.1:5000/tasks/complete/${taskId}`, {
             method: 'PUT',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -274,27 +274,8 @@ async function toggleTaskStatus(taskId, currentStatus) {
         });
 
         if (response.ok) {
-            const newStatus = currentStatus === 'completed' ? 'pending' : 'completed';
-            
-            // Remove task from current tab
-            const taskElement = document.querySelector(`[data-task-id="${taskId}"]`);
-            if (taskElement) {
-                taskElement.remove();
-            }
-
-            // If task was marked as completed, refresh the completed tasks tab
-            if (newStatus === 'completed') {
-                // Switch to completed tab if not already there
-                const completedTab = document.querySelector('[data-tab="completed"]');
-                if (completedTab) {
-                    switchTab('completed');
-                }
-                await loadTasks('completed');
-            } else {
-                // If task was unmarked as completed, refresh the pending tasks tab
-                await loadTasks('pending');
-                switchTab('pending');
-            }
+            // Refresh the tasks
+            await fetchTasks();
         } else {
             const data = await response.json();
             showError(data.error || 'Failed to update task status');

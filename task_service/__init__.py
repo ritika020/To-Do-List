@@ -17,7 +17,7 @@ def create_app():
         'password': os.getenv('DB_PASSWORD'),
         'database': os.getenv('DB_NAME')
     }
-    
+    app.debug = True
     return app
 
 # Utility functions for task service

@@ -1,75 +1,26 @@
  * Serving Flask app '__init__'
- * Debug mode: off
+ * Debug mode: on
 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5002
 [33mPress CTRL+C to quit[0m
-127.0.0.1 - - [17/Nov/2024 00:28:16] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:28:16] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:28:18] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:28:18] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:28:28] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:28:28] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:28:39] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:28:39] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:28:40] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:28:40] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:28:41] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:28:41] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:30:43] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:30:43] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:30:57] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:30:57] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:31:10] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:31:10] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:32:00] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:32:00] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:32:02] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:32:02] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:32:25] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:32:25] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:33:05] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:33:05] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:33:06] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:33:06] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:33:22] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:33:22] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:39:03] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:39:03] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:39:26] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:39:26] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:40:20] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:40:20] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:40:26] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:40:26] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:42:08] "GET /tasks?status=pending&user_id=f0f62e7e-0e21-486f-8ad4-793919fe21ed HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:42:08] "GET /tasks/f0f62e7e-0e21-486f-8ad4-793919fe21ed HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:43:07] "GET /tasks?status=pending&user_id=f0f62e7e-0e21-486f-8ad4-793919fe21ed HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:43:07] "GET /tasks/f0f62e7e-0e21-486f-8ad4-793919fe21ed HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:43:15] "[35m[1mPOST /tasks HTTP/1.1[0m" 201 -
-127.0.0.1 - - [17/Nov/2024 00:43:15] "GET /tasks/f0f62e7e-0e21-486f-8ad4-793919fe21ed HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:43:37] "[35m[1mPOST /tasks HTTP/1.1[0m" 201 -
-127.0.0.1 - - [17/Nov/2024 00:43:37] "GET /tasks/f0f62e7e-0e21-486f-8ad4-793919fe21ed HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:43:44] "GET /tasks/f0f62e7e-0e21-486f-8ad4-793919fe21ed HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:43:44] "GET /tasks?status=pending&user_id=f0f62e7e-0e21-486f-8ad4-793919fe21ed HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:43:45] "GET /tasks?status=completed&user_id=f0f62e7e-0e21-486f-8ad4-793919fe21ed HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:43:46] "GET /tasks?status=pending&user_id=f0f62e7e-0e21-486f-8ad4-793919fe21ed HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:43:47] "GET /tasks?status=completed&user_id=f0f62e7e-0e21-486f-8ad4-793919fe21ed HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:43:49] "GET /tasks?status=pending&user_id=f0f62e7e-0e21-486f-8ad4-793919fe21ed HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:43:50] "PUT /tasks/complete/5ae0aafe-c291-4145-9f85-327c1c0e20d0 HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:43:50] "GET /tasks/f0f62e7e-0e21-486f-8ad4-793919fe21ed HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:43:51] "PUT /tasks/complete/bce5214c-1e7f-4087-ad90-0b7ea3a1ca0c HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:43:51] "GET /tasks/f0f62e7e-0e21-486f-8ad4-793919fe21ed HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:46:16] "GET /tasks/f0f62e7e-0e21-486f-8ad4-793919fe21ed HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:46:16] "GET /tasks?status=pending&user_id=f0f62e7e-0e21-486f-8ad4-793919fe21ed HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:46:40] "GET /tasks?status=pending&user_id=f0f62e7e-0e21-486f-8ad4-793919fe21ed HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:46:40] "GET /tasks/f0f62e7e-0e21-486f-8ad4-793919fe21ed HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:47:06] "GET /tasks/f0f62e7e-0e21-486f-8ad4-793919fe21ed HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:47:06] "GET /tasks?status=pending&user_id=f0f62e7e-0e21-486f-8ad4-793919fe21ed HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:48:02] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:48:02] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:48:37] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:48:37] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:49:01] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:49:01] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 00:49:08] "[35m[1mPOST /tasks HTTP/1.1[0m" 201 -
-127.0.0.1 - - [17/Nov/2024 00:49:08] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 333-893-474
+127.0.0.1 - - [17/Nov/2024 01:00:01] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+127.0.0.1 - - [17/Nov/2024 01:00:01] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+127.0.0.1 - - [17/Nov/2024 01:00:10] "[35m[1mPOST /tasks HTTP/1.1[0m" 201 -
+127.0.0.1 - - [17/Nov/2024 01:00:10] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+127.0.0.1 - - [17/Nov/2024 01:00:17] "PUT /tasks/complete/36ff4ba4-ecce-4ee2-91d3-47dbc41a8616 HTTP/1.1" 200 -
+127.0.0.1 - - [17/Nov/2024 01:00:17] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+127.0.0.1 - - [17/Nov/2024 01:00:17] "PUT /tasks/complete/36ff4ba4-ecce-4ee2-91d3-47dbc41a8616 HTTP/1.1" 200 -
+127.0.0.1 - - [17/Nov/2024 01:00:17] "GET /tasks/0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+127.0.0.1 - - [17/Nov/2024 01:00:18] "GET /tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+127.0.0.1 - - [17/Nov/2024 01:00:21] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+127.0.0.1 - - [17/Nov/2024 01:00:22] "GET /tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+127.0.0.1 - - [17/Nov/2024 01:00:23] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+127.0.0.1 - - [17/Nov/2024 01:00:23] "GET /tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+127.0.0.1 - - [17/Nov/2024 01:00:24] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+127.0.0.1 - - [17/Nov/2024 01:00:25] "GET /tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+127.0.0.1 - - [17/Nov/2024 01:00:27] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+127.0.0.1 - - [17/Nov/2024 01:00:28] "GET /tasks?status=completed&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
+127.0.0.1 - - [17/Nov/2024 01:00:38] "GET /tasks?status=pending&user_id=0f0e94da-887c-4ba1-8489-53519ef4358f HTTP/1.1" 200 -
