@@ -516,4 +516,34 @@ header h1 {
 
 .tab:hover {
     background-color: #f5f5f5;
+}
+
+.select-all-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 10px;
+    border-right: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+.select-all-container input[type="checkbox"] {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+.select-all-container label {
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.bulk-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
 } 

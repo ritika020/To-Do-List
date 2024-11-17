@@ -92,6 +92,9 @@ function createTaskElement(task) {
     completeBtn?.addEventListener('click', () => toggleTaskStatus(task.task_id));
     deleteBtn?.addEventListener('click', () => deleteTask(task.task_id));
 
+    const checkbox = taskElement.querySelector('.task-checkbox');
+    checkbox?.addEventListener('change', updateSelectAllCheckbox);
+
     return taskElement;
 }
 
@@ -317,6 +320,12 @@ function switchTab(tabName) {
 
     // Load tasks for the selected tab
     loadTasks(tabName);
+
+    // Reset select all checkbox
+    const selectAllCheckbox = document.getElementById('selectAll');
+    if (selectAllCheckbox) {
+        selectAllCheckbox.checked = false;
+    }
 }
 
 // Add CSS classes for smooth transitions
@@ -391,6 +400,10 @@ function createBulkActionButtons() {
     const bulkActionsDiv = document.createElement('div');
     bulkActionsDiv.className = 'bulk-actions';
     bulkActionsDiv.innerHTML = `
+        <div class="select-all-container">
+            <input type="checkbox" id="selectAll" title="Select All">
+            <label for="selectAll">Select All</label>
+        </div>
         <button class="bulk-complete" title="Complete Selected">
             <i class="fas fa-check"></i>
         </button>
@@ -466,4 +479,31 @@ function getSelectedTasks() {
 
 function getCurrentTab() {
     return document.querySelector('.tab.active').dataset.tab;
+}
+
+// Add this after your existing event listeners
+document.getElementById('selectAll')?.addEventListener('change', function() {
+    const currentTab = getCurrentTab();
+    const container = document.getElementById(`${currentTab}Tasks`);
+    const checkboxes = container.querySelectorAll('.task-checkbox');
+    
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = this.checked;
+    });
+});
+
+// Add this function to update select all checkbox state when individual checkboxes change
+function updateSelectAllCheckbox() {
+    const currentTab = getCurrentTab();
+    const container = document.getElementById(`${currentTab}Tasks`);
+    const checkboxes = container.querySelectorAll('.task-checkbox');
+    const selectAllCheckbox = document.getElementById('selectAll');
+    
+    if (checkboxes.length === 0) {
+        selectAllCheckbox.checked = false;
+        return;
+    }
+    
+    const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
+    selectAllCheckbox.checked = allChecked;
 }

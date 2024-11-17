@@ -3,28 +3,3 @@
 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5003
 [33mPress CTRL+C to quit[0m
-127.0.0.1 - - [17/Nov/2024 01:09:16] "GET /suggestions?q=check HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:09:17] "POST /suggestions/add HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:09:24] "GET /suggestions?q=te HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:09:25] "GET /suggestions?q=test HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:09:26] "GET /suggestions?q=test2222 HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:09:30] "POST /suggestions/add HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:09:54] "GET /suggestions?q=test HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:10:05] "POST /suggestions/add HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:10:08] "GET /suggestions?q=test HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:10:10] "GET /suggestions?q=test234 HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:10:11] "POST /suggestions/add HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:11:42] "GET /suggestions?q=test HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:11:42] "POST /suggestions/add HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:11:45] "GET /suggestions?q=test HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:11:48] "POST /suggestions/add HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:12:40] "GET /suggestions?q=test HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:12:41] "POST /suggestions/add HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:12:45] "GET /suggestions?q=test HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:12:50] "POST /suggestions/add HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:14:33] "GET /suggestions?q=check HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:14:33] "GET /suggestions?q=check1 HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:14:35] "POST /suggestions/add HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:14:40] "GET /suggestions?q=test HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:14:41] "GET /suggestions?q=test1 HTTP/1.1" 200 -
-127.0.0.1 - - [17/Nov/2024 01:14:45] "POST /suggestions/add HTTP/1.1" 200 -
