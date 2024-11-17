@@ -431,8 +431,8 @@ function createBulkActionButtons() {
 }
 
 // Add delete task function
-async function deleteTask(taskId) {
-    if (!confirm('Are you sure you want to delete this task?')) return;
+async function deleteTask(taskId, bulk_delete=false) {
+    if (!bulk_delete && !confirm('Are you sure you want to delete this task?')) return;
 
     try {
         const response = await fetch(`http://127.0.0.1:5000/tasks/${taskId}`, {
@@ -483,7 +483,7 @@ async function deleteBulkTasks() {
     if (!confirm(`Delete ${selectedTasks.length} selected tasks?`)) return;
 
     for (const taskId of selectedTasks) {
-        await deleteTask(taskId);
+        await deleteTask(taskId, bulk_delete=true);
     }
     await loadTasks(getCurrentTab());
 }
