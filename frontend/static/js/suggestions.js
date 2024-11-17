@@ -20,7 +20,7 @@ async function fetchSuggestions() {
     const query = taskInput.value;
 
     try {
-        const response = await fetch(`${API_URL}/suggestions?q=${encodeURIComponent(query)}`, {
+        const response = await fetch(`http://127.0.0.1:5000/suggestions?q=${encodeURIComponent(query)}`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

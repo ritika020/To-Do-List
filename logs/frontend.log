@@ -55,3 +55,40 @@
 ::1 - - [17/Nov/2024 00:42:08] "GET /static/js/tasks.js HTTP/1.1" 304 -
 ::1 - - [17/Nov/2024 00:42:14] "GET /templates/index.html? HTTP/1.1" 304 -
 ::1 - - [17/Nov/2024 00:42:14] "GET /static/js/auth.js HTTP/1.1" 304 -
+::1 - - [17/Nov/2024 00:42:46] "GET /templates/login.html HTTP/1.1" 304 -
+::1 - - [17/Nov/2024 00:42:46] "GET /static/js/auth.js HTTP/1.1" 304 -
+::1 - - [17/Nov/2024 00:43:07] "GET /static/js/auth.js HTTP/1.1" 304 -
+::1 - - [17/Nov/2024 00:43:44] "GET /templates/index.html HTTP/1.1" 304 -
+::1 - - [17/Nov/2024 00:43:44] "GET /static/js/auth.js HTTP/1.1" 304 -
+::1 - - [17/Nov/2024 00:46:16] "GET /templates/index.html HTTP/1.1" 304 -
+::1 - - [17/Nov/2024 00:46:16] "GET /static/js/tasks.js HTTP/1.1" 200 -
+::1 - - [17/Nov/2024 00:46:16] "GET /static/js/auth.js HTTP/1.1" 304 -
+::1 - - [17/Nov/2024 00:46:40] "GET /templates/index.html HTTP/1.1" 304 -
+::1 - - [17/Nov/2024 00:46:40] "GET /static/js/tasks.js HTTP/1.1" 304 -
+::1 - - [17/Nov/2024 00:47:06] "GET /templates/index.html HTTP/1.1" 304 -
+::1 - - [17/Nov/2024 00:47:06] "GET /static/js/tasks.js HTTP/1.1" 304 -
+::1 - - [17/Nov/2024 00:47:06] "GET /static/js/auth.js HTTP/1.1" 304 -
+::1 - - [17/Nov/2024 00:47:53] "GET /templates/login.html HTTP/1.1" 304 -
+::1 - - [17/Nov/2024 00:47:53] "GET /templates/index.html? HTTP/1.1" 304 -
+::1 - - [17/Nov/2024 00:47:53] "GET /static/js/auth.js HTTP/1.1" 304 -
+::1 - - [17/Nov/2024 00:47:53] "GET /static/js/tasks.js HTTP/1.1" 304 -
+::1 - - [17/Nov/2024 00:47:53] "GET /templates/login.html HTTP/1.1" 200 -
+::1 - - [17/Nov/2024 00:48:26] "GET /templates/login.html HTTP/1.1" 200 -
+::1 - - [17/Nov/2024 00:48:26] "GET /static/css/style.css HTTP/1.1" 304 -
+::1 - - [17/Nov/2024 00:48:26] "GET /static/js/auth.js HTTP/1.1" 200 -
+::1 - - [17/Nov/2024 00:48:26] code 404, message File not found
+::1 - - [17/Nov/2024 00:48:26] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [17/Nov/2024 00:48:32] "GET /templates/login.html HTTP/1.1" 200 -
+::1 - - [17/Nov/2024 00:48:32] "GET /static/css/style.css HTTP/1.1" 200 -
+::1 - - [17/Nov/2024 00:48:32] "GET /static/js/auth.js HTTP/1.1" 200 -
+::1 - - [17/Nov/2024 00:48:36] "GET /templates/index.html HTTP/1.1" 200 -
+::1 - - [17/Nov/2024 00:48:36] "GET /static/js/suggestions.js HTTP/1.1" 200 -
+::1 - - [17/Nov/2024 00:48:36] "GET /static/js/tasks.js HTTP/1.1" 200 -
+::1 - - [17/Nov/2024 00:48:36] code 404, message File not found
+::1 - - [17/Nov/2024 00:48:36] "GET /static/favicon.png HTTP/1.1" 404 -
+::1 - - [17/Nov/2024 00:48:36] "GET /static/favicon.svg HTTP/1.1" 200 -
+::1 - - [17/Nov/2024 00:48:45] code 404, message File not found
+::1 - - [17/Nov/2024 00:48:45] "GET /static/favicon.png HTTP/1.1" 404 -
+::1 - - [17/Nov/2024 00:49:01] "GET /templates/index.html HTTP/1.1" 304 -
+::1 - - [17/Nov/2024 00:49:01] "GET /static/js/tasks.js HTTP/1.1" 304 -
+::1 - - [17/Nov/2024 00:49:01] "GET /static/js/suggestions.js HTTP/1.1" 304 -

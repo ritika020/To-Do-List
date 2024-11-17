@@ -1,4 +1,4 @@
-const API_URL = 'http://127.0.0.1:5000';
+// const API_URL = 'http://127.0.0.1:5000';
 
 // Check authentication
 function checkAuth() {
@@ -15,7 +15,7 @@ async function fetchTasks() {
     const userId = localStorage.getItem('userId');
 
     try {
-        const response = await fetch(`${API_URL}/tasks/${userId}`, {
+        const response = await fetch(`http://127.0.0.1:5000/tasks/${userId}`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -122,7 +122,7 @@ document.getElementById('taskForm')?.addEventListener('submit', async (e) => {
     const userId = localStorage.getItem('userId');
 
     try {
-        const response = await fetch(`${API_URL}/tasks`, {
+        const response = await fetch(`http://127.0.0.1:5000/tasks`, {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -150,7 +150,7 @@ async function toggleTaskComplete(taskId) {
     const token = checkAuth();
 
     try {
-        const response = await fetch(`${API_URL}/tasks/complete/${taskId}`, {
+        const response = await fetch(`http://127.0.0.1:5000/tasks/complete/${taskId}`, {
             method: 'PUT',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -265,7 +265,7 @@ function createTaskForm() {
 // Modify the toggleTaskStatus function
 async function toggleTaskStatus(taskId, currentStatus) {
     try {
-        const response = await fetch(`${API_URL}/tasks/${taskId}/toggle`, {
+        const response = await fetch(`http://127.0.0.1:5000/tasks/${taskId}/toggle`, {
             method: 'PUT',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -351,7 +351,7 @@ async function loadTasks(status) {
         const tasksContainer = document.getElementById(`${status}Tasks`);
         tasksContainer.innerHTML = '<p class="loading">Loading tasks...</p>';
 
-        const response = await fetch(`${API_URL}/tasks?status=${status}&user_id=${userId}`, {
+        const response = await fetch(`http://127.0.0.1:5000/tasks?status=${status}&user_id=${userId}`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
