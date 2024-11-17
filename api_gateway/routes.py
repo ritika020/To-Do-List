@@ -192,4 +192,16 @@ def after_request(response):
     - Data: {response.get_data(as_text=True)}
     """)
     return response
+
+# Add this new route
+@app.route('/tasks/<task_id>', methods=['DELETE'])
+@token_required
+def delete_task(task_id):
+    try:
+        response = requests.delete(
+            f"{app.config['TASK_SERVICE_URL']}/tasks/{task_id}"
+        )
+        return handle_service_error(response)
+    except requests.exceptions.ConnectionError:
+        return jsonify({'error': 'Task service unavailable'}), 503
   

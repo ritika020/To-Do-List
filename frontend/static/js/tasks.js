@@ -59,8 +59,9 @@ function createTaskElement(task) {
         100;
 
     taskElement.innerHTML = `
-        <input type="checkbox" ${task.is_completed ? 'checked' : ''} 
-               onchange="toggleTaskComplete('${task.task_id}')">
+        <div class="task-select">
+            <input type="checkbox" class="task-checkbox">
+        </div>
         <div class="task-content">
             <p>${task.task_text}</p>
             ${timeRemaining ? `
@@ -72,22 +73,24 @@ function createTaskElement(task) {
                 </div>
             ` : ''}
         </div>
+        <div class="task-actions">
+            ${!task.is_completed ? `
+                <button class="complete-task" title="Complete Task">
+                    <i class="fas fa-check"></i>
+                </button>
+            ` : ''}
+            <button class="delete-task" title="Delete Task">
+                <i class="fas fa-trash"></i>
+            </button>
+        </div>
     `;
 
-    // Modify the checkbox event listener
-    const checkbox = taskElement.querySelector('input[type="checkbox"]');
-    checkbox.addEventListener('change', async (e) => {
-        const taskItem = e.target.closest('.task-item');
-        if (e.target.checked) {
-            taskItem.classList.add('completing');
-            // Wait for animation to complete
-            setTimeout(() => {
-                toggleTaskStatus(task.task_id, task.status);
-            }, 300);
-        } else {
-            toggleTaskStatus(task.task_id, task.status);
-        }
-    });
+    // Add event listeners
+    const completeBtn = taskElement.querySelector('.complete-task');
+    const deleteBtn = taskElement.querySelector('.delete-task');
+    
+    completeBtn?.addEventListener('click', () => toggleTaskStatus(task.task_id));
+    deleteBtn?.addEventListener('click', () => deleteTask(task.task_id));
 
     return taskElement;
 }
@@ -294,21 +297,21 @@ function switchTab(tabName) {
     });
     document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
 
-    // Update active content with transition
+    // Show/hide bulk complete button based on tab
+    const bulkCompleteBtn = document.querySelector('.bulk-complete');
+    if (bulkCompleteBtn) {
+        bulkCompleteBtn.style.display = tabName === 'pending' ? 'block' : 'none';
+    }
+
+    // Update active content
     const tabContents = document.querySelectorAll('.tab-content');
     tabContents.forEach(content => {
         if (content.id === `${tabName}Tasks`) {
             content.style.display = 'block';
-            // Trigger reflow
-            content.offsetHeight;
             content.classList.add('active');
         } else {
             content.classList.remove('active');
-            setTimeout(() => {
-                if (!content.classList.contains('active')) {
-                    content.style.display = 'none';
-                }
-            }, 300); // Match transition duration
+            content.style.display = 'none';
         }
     });
 
@@ -330,6 +333,13 @@ async function loadTasks(status) {
         }
 
         const tasksContainer = document.getElementById(`${status}Tasks`);
+        const bulkActions = createBulkActionButtons();
+        tasksContainer.prepend(bulkActions);
+
+        // Add event listeners for bulk actions
+        bulkActions.querySelector('.bulk-complete')?.addEventListener('click', completeBulkTasks);
+        bulkActions.querySelector('.bulk-delete')?.addEventListener('click', deleteBulkTasks);
+
         tasksContainer.innerHTML = '<p class="loading">Loading tasks...</p>';
 
         const response = await fetch(`http://127.0.0.1:5000/tasks?status=${status}&user_id=${userId}`, {
@@ -375,3 +385,85 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load pending tasks by default
     switchTab('pending');
 });
+
+// Function to handle bulk actions
+function createBulkActionButtons() {
+    const bulkActionsDiv = document.createElement('div');
+    bulkActionsDiv.className = 'bulk-actions';
+    bulkActionsDiv.innerHTML = `
+        <button class="bulk-complete" title="Complete Selected">
+            <i class="fas fa-check"></i>
+        </button>
+        <button class="bulk-delete" title="Delete Selected">
+            <i class="fas fa-trash"></i>
+        </button>
+    `;
+    return bulkActionsDiv;
+}
+
+// Add delete task function
+async function deleteTask(taskId) {
+    if (!confirm('Are you sure you want to delete this task?')) return;
+
+    try {
+        const response = await fetch(`http://127.0.0.1:5000/tasks/${taskId}`, {
+            method: 'DELETE',
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem('token')}`
+            }
+        });
+
+        if (response.ok) {
+            await loadTasks(getCurrentTab());
+        } else {
+            const data = await response.json();
+            showError(data.error || 'Failed to delete task');
+        }
+    } catch (error) {
+        showError('An error occurred while deleting the task');
+        console.error('Error:', error);
+    }
+}
+
+// Add bulk action functions
+async function completeBulkTasks() {
+    const currentTab = getCurrentTab();
+    if (currentTab !== 'pending') return;
+
+    const selectedTasks = getSelectedTasks();
+    if (selectedTasks.length === 0) {
+        alert('Please select tasks to complete');
+        return;
+    }
+
+    if (!confirm(`Complete ${selectedTasks.length} selected tasks?`)) return;
+
+    for (const taskId of selectedTasks) {
+        await toggleTaskStatus(taskId);
+    }
+    await loadTasks(currentTab);
+}
+
+async function deleteBulkTasks() {
+    const selectedTasks = getSelectedTasks();
+    if (selectedTasks.length === 0) {
+        alert('Please select tasks to delete');
+        return;
+    }
+
+    if (!confirm(`Delete ${selectedTasks.length} selected tasks?`)) return;
+
+    for (const taskId of selectedTasks) {
+        await deleteTask(taskId);
+    }
+    await loadTasks(getCurrentTab());
+}
+
+function getSelectedTasks() {
+    const checkboxes = document.querySelectorAll('.task-checkbox:checked');
+    return Array.from(checkboxes).map(cb => cb.closest('.task-item').dataset.taskId);
+}
+
+function getCurrentTab() {
+    return document.querySelector('.tab.active').dataset.tab;
+}

@@ -7,6 +7,7 @@
     <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
     <link rel="icon" type="image/png" href="../static/favicon.png">
     <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script>
         if (!localStorage.getItem('token')) {
             window.location.href = '/templates/login.html';
@@ -43,9 +44,19 @@
             </form>
         </div>
 
-        <div class="tabs">
-            <div class="tab active" data-tab="pending" onclick="switchTab('pending')">Pending Tasks</div>
-            <div class="tab" data-tab="completed" onclick="switchTab('completed')">Completed Tasks</div>
+        <div class="tabs-container">
+            <div class="tabs">
+                <div class="tab active" data-tab="pending" onclick="switchTab('pending')">Pending Tasks</div>
+                <div class="tab" data-tab="completed" onclick="switchTab('completed')">Completed Tasks</div>
+            </div>
+            <div class="bulk-actions">
+                <button class="bulk-complete" title="Complete Selected" onclick="completeBulkTasks()">
+                    <i class="fas fa-check"></i>
+                </button>
+                <button class="bulk-delete" title="Delete Selected" onclick="deleteBulkTasks()">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
         </div>
 
         <div class="tab-content active" id="pendingTasks">

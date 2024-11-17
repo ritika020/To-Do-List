@@ -159,5 +159,20 @@ def get_tasks_by_status():
         cursor.close()
         conn.close()
 
+@app.route('/tasks/<task_id>', methods=['DELETE'])
+def delete_task(task_id):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    try:
+        cursor.execute("DELETE FROM tasks WHERE task_id = %s", (task_id,))
+        conn.commit()
+        return jsonify({'message': 'Task deleted successfully'}), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+    finally:
+        cursor.close()
+        conn.close()
+
 if __name__ == '__main__':
     app.run(port=5002)
